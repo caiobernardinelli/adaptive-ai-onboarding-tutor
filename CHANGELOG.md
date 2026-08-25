@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 The project is currently in early development. Entries are organized chronologically to document the evolution of product, learning architecture, and technical implementation.
 
+## 2026-08-25
+
+### Added
+
+- Defined the initial Learning Graph specification.
+- Introduced Domain Nodes and Concept Nodes for hierarchical learning representation.
+- Defined `contains` and `prerequisite_for` as the initial graph relationships.
+- Established concept-level and domain-level learning objectives.
+- Formalized the Explain, Relate, Apply, and Justify pedagogical evidence matrix.
+- Defined binary `demonstrated` and `not_demonstrated` evidence for the MVP.
+- Introduced temporal Evidence History for learner assessment.
+- Defined `learning`, `sufficient`, and `mastered` learner states.
+- Added an independent `needs_reinforcement` mechanism.
+- Defined concept-level and integrative domain progression requirements.
+- Added targeted prerequisite reinforcement and return-to-context behavior.
+- Introduced delayed retention reassessment using an initial 7–10 day project heuristic.
+- Separated Learning Graph, Evidence History, Learner State, Tutor Policy, and deterministic progression responsibilities.
+- Established technology neutrality for the first graph implementation.
+- Explicitly deferred Neo4j, LangGraph, GraphRAG, graph databases, and advanced recommendation logic until justified by implementation needs.
+
 ## 2026-08-21
 
 ### Added
