@@ -18,3 +18,13 @@ The project is currently in early development. Entries are organized chronologic
 - Added basic Programming, Statistics, and Data Visualization as parallel onboarding competencies.
 - Positioned Machine Learning and Artificial Intelligence as later stages of professional development.
 - Established the distinction between pedagogical progression and future RAG-based knowledge retrieval.
+- Defined the initial tutor behavior policy.
+- Formalized direct-answer rules and the Learner Reasoning Ownership Principle.
+- Defined a progressive assistance ladder for guided problem solving.
+- Added explicit error-correction and learning-progression criteria.
+- Defined prerequisite recovery and return-to-context behavior.
+- Established a source hierarchy for Genesys Cloud and external technologies.
+- Added software-version-aware official documentation rules.
+- Defined uncertainty and non-fabrication requirements.
+- Defined how real professional problems and urgent situations should be handled pedagogically.
+- Established operational and confidentiality boundaries for the tutor.
