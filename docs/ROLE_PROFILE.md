@@ -2,292 +2,265 @@
 
 ## 1. Purpose
 
-This document defines the competency domains required for the initial role supported by the Adaptive AI Onboarding Tutor.
+This document defines the progressive competency profile used by the public reference case of the Adaptive AI Onboarding Tutor.
 
-The initial use case is a Junior Data Analyst working in a Customer Experience and Contact Center environment using Genesys Cloud.
+The reference learner is a **Junior Data Analyst working in a Contact Center and Genesys Cloud environment**.
 
-The combination of these domains should progressively prepare the analyst to:
+The Role Profile is intentionally broader than a single Learning Graph version. Not every competency described here must become a Node in the initial onboarding YAML.
 
-- act as a Genesys Cloud data consultant focused on data access, consumption, and decision support;
-- create ad-hoc analyses for different client problems, questions, and scenarios within the Genesys Cloud ecosystem.
+## 2. Formal Onboarding Scope
 
----
+The `junior_data_analyst_onboarding` reference graph v0.2 contains seven formal Domains:
 
-## 2. Prerequisite Rule
+1. Contact Center Fundamentals;
+2. Contact Center Metrics;
+3. Genesys Cloud;
+4. Genesys / Data Access;
+5. Programming;
+6. Statistics;
+7. Data Visualization.
 
-Prerequisites represent knowledge that should be minimally understood for a domain to be learned effectively.
+Operational Workforce Management, labor-regulation content, Machine Learning, and advanced Artificial Intelligence belong to later professional-development paths.
 
-They are **not mandatory entry requirements**.
+## 3. Prerequisite Rule
 
-If the learner has gaps in a prerequisite, the tutor should provide supporting content before or during the learning progression.
+Pedagogically useful prerequisites described in this Role Profile do **not** automatically create `prerequisite_for` relationships in the Learning Graph.
 
-The objective is to prevent missing foundational knowledge from becoming a barrier to understanding more advanced concepts.
+Only relationships explicitly approved in the versioned graph are structural prerequisites.
 
----
-
-# 3. Competency Domains
-
-## 3.1 Contact Center Fundamentals
-
-**Prerequisites:** No previous Contact Center knowledge required.
-
-The learner should understand the fundamental concepts of a Contact Center, including:
-
-- flows and their attributes and markings;
-- queues and their performance metrics;
-- queue objectives;
-- thresholds;
-- service level;
-- customer service agents;
-- agent performance metrics;
-- agent objectives.
-
-This domain establishes the business foundation required to understand Contact Center metrics and Genesys Cloud.
+When a learner needs background knowledge that is not represented as a formal prerequisite, the tutor may provide supporting content without silently modifying the graph.
 
 ---
 
-## 3.2 Contact Center Metrics
+# Horizon A — Initial Onboarding
 
-**Prerequisites:** Contact Center Fundamentals.
+## 4. Contact Center Fundamentals
 
-The learner should understand the main metrics used in a Contact Center and how they relate to the customer service journey.
+The learner should understand:
 
-The learning context should consider two different analytical audiences:
+- what a Contact Center is;
+- customer interactions;
+- agents;
+- queues;
+- flows;
+- operational objectives;
+- the basic interaction journey;
+- ACD — Automatic Call Distribution;
+- agent / ACD skills.
 
-- Control Desk / operational performance monitoring;
-- deeper analytical investigation / Analytics.
+The goal is to create a usable mental model of how an interaction is organized and routed before deeper metric and platform analysis.
 
-Relevant concepts and metrics include:
+## 5. Contact Center Metrics
 
-- ACD;
-- ASA;
-- Service Level;
-- AHT;
-- ACW;
-- NPS;
-- Talk;
-- Hold;
-- Callback;
+The learner should understand and relate operational volumes, outcomes, times, rates, and customer-experience indicators.
+
+The reference graph includes:
+
+- Offered;
+- Answer / Answered;
 - Abandonment;
-- Overflow.
+- Flow-out;
+- Flow Rate;
+- Flow Disconnect — Volume;
+- Flow Disconnect — Percentage;
+- Flow Retention;
+- Overflow / transfer-to-another-destination behavior;
+- Answer %;
+- Abandon %;
+- ASA — Average Speed of Answer;
+- Average Wait;
+- Service Level;
+- Talk Time;
+- Hold Time;
+- ACW — After Call Work;
+- AHT — Average Handle Time;
+- repeat contact;
+- FCR — First Contact Resolution;
+- CSAT — Customer Satisfaction;
+- Customer Effort Score;
+- NPS — Net Promoter Score.
 
-The learner should progressively move beyond memorizing definitions and begin understanding how changes in these metrics may reflect operational behavior.
+`Flow Rate` and `Flow Retention` are represented as **derived operational concepts** in the reference case. The public project does not publish or assume a universal employer-specific formula for them.
 
----
+The learning context should support both operational monitoring and deeper analytics.
 
-## 3.3 Genesys Cloud
+## 6. Genesys Cloud
 
-**Prerequisites:**
+The learner should develop an introductory but connected understanding of:
 
-- basic Cloud and SaaS concepts;
-- Contact Center Fundamentals.
-
-The learner should develop a broader understanding of the Genesys Cloud platform, including:
-
-- how queues and flows interact;
-- how a customer interaction is handled;
-- basic familiarity with the Genesys Cloud interface;
-- communication and integration technologies used by Genesys Cloud.
-
-Relevant integration mechanisms include:
-
+- general platform operation;
+- basic interface navigation;
+- queues and flows inside the platform;
+- how an interaction is handled;
+- major product families and capabilities;
+- Divisions and their role in organization/access control;
+- integration mechanisms;
 - REST APIs;
 - Data Actions;
 - Triggers;
-- Hooks.
-
-The learner should also progressively become familiar with intermediate and advanced Genesys Cloud capabilities across different product and licensing areas, including:
-
+- Webhooks and Notifications;
 - Campaigns;
-- WEM;
+- WEM — Workforce Engagement Management;
 - Evaluations;
-- WFM;
-- workforce and journey-related capabilities;
+- WFM as a product-level overview;
+- Virtual Agent fundamentals;
+- Speech and Text Analytics;
+- Sentiment;
+- Topics / Topic Spotting;
 - AI Scoring;
-- Speech & Analytics.
+- Containment;
+- Analytics Workspace and Performance Dashboards.
 
----
+The initial graph includes only a **product-level WFM overview**. Operational WFM is post-onboarding.
 
-## 3.4 Genesys / Data Access
+## 7. Genesys / Data Access
 
-**Prerequisites:**
+The learner should understand how platform data can be located and used for analysis.
 
-- basic system integration concepts;
-- Genesys Cloud;
-- Contact Center Fundamentals;
-- Contact Center Metrics.
-
-The learner should understand how Genesys Cloud exposes data and how the main data structures relate to operational and analytical questions.
-
-The initial scope includes the APIs and structures most relevant to the role, such as:
+The formal reference Concepts include:
 
 - Conversations Details Query;
-- Conversations Attributes Search;
+- Conversation Participant Attributes Search;
 - Routing Skills;
 - Queues;
 - Flows;
 - Users;
 - Wrap-ups;
-- Divisions;
 - Outcomes;
 - Data Tables;
 - Transcript Search;
 - Users Details Query.
 
-Supporting concepts such as APIs, REST, JSON, requests, responses, authentication, and data structures may be introduced when required by the learning progression.
+Access to Division data through APIs remains a relevant application topic, while the formal `Divisions` Concept belongs to the Genesys Cloud Domain to avoid duplicate Nodes.
 
----
+Supporting knowledge such as HTTP, REST, JSON, request/response behavior, and authentication may be taught when needed without automatically becoming graph Nodes.
 
-## 3.5 Programming
+## 8. Programming
 
-**Prerequisites:**
+The onboarding objective is applied technical literacy rather than full software-engineering autonomy.
 
-- programming logic;
-- variables and loops;
-- basic data structures;
-- SQL fundamentals.
+Formal Concepts include:
 
-The learner should develop practical data-processing skills using:
+- Basic Python Structures;
+- Reading Simple Code;
+- Reading Python Lists;
+- Reading Python Dictionaries;
+- Reading Python Sets;
+- Reading NumPy Arrays;
+- Data Structures for Analysis;
+- Basic Data Manipulation;
+- Basic Pandas;
+- Basic SQL;
+- Reading Team Scripts;
+- Small Supervised Data Manipulations.
 
-- Python;
-- NumPy;
-- Pandas;
-- SQL.
+The learner should be able to explain the flow of small code fragments, understand common data structures, and perform small data-processing tasks under review.
 
-The objective is not only to understand syntax but to use programming as a tool for extracting, transforming, exploring, and analyzing data.
+## 9. Statistics
 
-Missing foundational programming concepts may be introduced as supporting content when necessary.
-
----
-
-## 3.6 Statistics
-
-**Prerequisites:** Basic mathematics required to interpret proportions and quantitative measures.
-
-The learner should understand descriptive statistics concepts including:
+The onboarding scope includes:
 
 - mean;
 - median;
 - percentiles;
 - variance;
-- correlation.
+- correlation;
+- basic distribution interpretation;
+- introductory p-value interpretation.
 
-### 3.6.1 Basic Statistical Inference
+Population vs. sample, the null hypothesis, and test-of-hypothesis fundamentals may be introduced as supporting content when required to prevent the p-value from becoming a memorized number without interpretation.
 
-The learner should later develop introductory understanding of:
+## 10. Data Visualization
 
-- p-value;
-- normal distribution / Gaussian curve;
-- population versus sample.
+The onboarding scope includes:
 
-Statistical concepts should be connected to analytical reasoning rather than treated only as mathematical formulas.
-
----
-
-## 3.7 Data Visualization
-
-**Prerequisites:**
-
-- basic programming;
-- basic understanding of charts;
-- basic understanding of data and metrics;
-- interpretation of variables.
-
-The learner should understand Data Visualization as a tool for analysis, communication, and insight generation.
-
-Relevant competencies include:
-
-- Matplotlib;
-- Streamlit;
-- visualization libraries;
-- DataViz principles;
-- Gestalt principles;
+- chart interpretation;
 - bar charts;
 - column charts;
 - time series;
-- matrices;
 - scatter plots;
-- area charts;
-- dashboard and analysis storytelling.
+- basic visualization selection;
+- introductory Gestalt principles;
+- visual communication;
+- a simple analytical narrative.
 
-The learner should progressively develop the ability to choose a visualization based on the analytical question rather than simply on tool availability.
+The objective is to connect a question, the data, a suitable visual representation, and an evidence-based conclusion.
 
 ---
 
-## 3.8 Machine Learning
+# Horizon B — Post-Onboarding Development
 
-**Prerequisites:**
+## 11. Workforce Management and Operational Journey
 
-- programming for data;
-- data processing;
-- statistics.
+Reserved for a later learning path.
 
-The learner should progressively develop the ability to recognize problems in which Machine Learning may provide value beyond descriptive analysis or deterministic rules.
+Topics include:
 
-Relevant concepts include:
+- WFM fundamentals;
+- forecasting;
+- staffing / capacity planning;
+- scheduling;
+- adherence;
+- occupancy;
+- working-time concepts;
+- breaks;
+- applicable labor-regulation concepts;
+- workload and operational-capacity interpretation;
+- the relationship among capacity, compliance, and operational planning.
+
+This is intentionally separated from the initial Learning Graph even though a WFM product overview appears inside Genesys Cloud.
+
+## 12. Machine Learning
+
+Later development may include:
 
 - classification;
 - regression;
 - clustering;
-- Precision;
-- Recall;
-- K-Nearest Neighbors (KNN);
-- linear regression;
-- logistic regression;
+- Precision and Recall;
+- KNN;
+- linear and logistic regression;
 - decision trees;
 - Random Forest;
 - XGBoost;
-- Support Vector Machines;
+- SVM;
 - cross-validation;
 - K-Fold;
 - K-Means.
 
-The learner should understand not only how models work, but why a particular approach may or may not be appropriate for a given business problem.
+## 13. Artificial Intelligence
 
----
+Later development may include:
 
-## 3.9 Artificial Intelligence
-
-**Prerequisites:**
-
-- general Artificial Intelligence concepts;
-- basic programming foundations for AI applications.
-
-The learner should understand concepts including:
-
-- Retrieval-Augmented Generation (RAG);
+- RAG;
 - embeddings;
 - Prompt Engineering;
 - AI agents;
 - AI-assisted automation;
 - AI-enabled pipelines.
 
-The objective is to develop the ability to propose AI-based alternatives when they provide meaningful value to data products, processes, or client problems.
-
 AI should not be treated as the default solution when a simpler analytical or deterministic approach is sufficient.
 
 ---
 
-# 4. Combined Professional Outcome
+# 14. Combined Professional Outcome
 
-The competency domains should not be treated as isolated subjects.
+The competency profile aims to connect:
 
-Their combination should progressively enable the analyst to connect:
+```text
+business context
+→ platform
+→ data
+→ analysis
+→ communication
+→ decision support
+```
 
-**business context → platform → data → analysis → communication → decision support**
+The expected direction is a data professional who can understand an operational problem, identify relevant platform concepts and data, perform supervised analysis, communicate findings, and progressively propose more advanced solutions when justified.
 
-The expected professional direction is an analyst capable of:
+## Document State
 
-- understanding Contact Center operations;
-- understanding how Genesys Cloud represents those operations;
-- identifying relevant metrics;
-- locating and accessing appropriate data;
-- processing and analyzing that data;
-- communicating findings through appropriate visualizations;
-- formulating plausible analytical hypotheses;
-- supporting client and team decision-making;
-- progressively proposing more advanced Machine Learning or Artificial Intelligence solutions when appropriate.
-
-The long-term objective is not simply technical proficiency.
-
-It is the development of a data-oriented consultant capable of connecting technical possibilities to business problems within the Genesys Cloud and Customer Experience ecosystem.
+- Public document version: `v0.2`
+- Product / MVP design: `v0.1`
+- Reference Learning Graph: `0.2`
+- Status: approved public portfolio adaptation for YAML implementation

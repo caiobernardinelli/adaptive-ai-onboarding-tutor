@@ -2,425 +2,449 @@
 
 ## 1. Purpose
 
-The Learning Map defines the macro-level learning progression required for the learner to move from initial onboarding toward progressively effective performance as a Data Analyst in a Genesys Cloud environment.
+The Learning Map defines the formal learning structure for the public reference onboarding path.
 
-This document is not yet a detailed lesson plan.
+The reference learner is a Junior Data Analyst in a Contact Center / Genesys Cloud analytics context.
 
-Its purpose is to define:
+The map defines:
 
-- which domains belong to the initial onboarding period;
-- which knowledge areas should be developed further afterward;
-- which domains depend on others;
-- which competencies may develop in parallel;
-- which competencies belong to medium- and long-term professional development;
-- which pedagogical principles should guide the tutor's progression decisions.
+- formal onboarding Domains;
+- formal Concepts;
+- approved prerequisite relationships;
+- parallel Root Domains;
+- post-onboarding boundaries.
 
-The learning journey should not be interpreted as a completely linear sequence.
+It is not a rigid lesson sequence. Runtime progression is derived from graph prerequisites, learner evidence, and deterministic progression rules.
 
-Some domains may develop in parallel once the minimum knowledge required for understanding them has been established.
+## 2. Learning Principle
 
----
+Progression is based on **demonstrated understanding**, not content exposure.
 
-## 2. Learning Progression Principle
+The common pedagogical dimensions are:
 
-The tutor must use **demonstrated understanding**, rather than content exposure alone, as the basis for progression.
+```text
+Explain
+Relate
+Apply
+Justify
+```
 
-A domain or topic must not be considered completed simply because its content has been presented to the learner.
+`Explain + Relate` is the minimum threshold for `sufficient`.
 
-The learner should demonstrate a minimum ability to:
+`Apply + Justify` are additionally required for `mastered`.
 
-- recognize the main concepts;
-- explain them in simple terms using their own words;
-- connect them with previously learned concepts;
-- apply the knowledge to exercises or new situations;
-- formulate plausible reasoning about problems related to the domain.
+## 3. Onboarding Domains
 
-Prerequisites are not mandatory entry requirements.
-
-If a knowledge gap prevents adequate understanding of a topic, the tutor should provide supporting content before or during the learning progression.
-
-The objective is not to require the learner to arrive already prepared for every domain. The objective is to prevent new knowledge from being built on gaps that significantly compromise understanding.
-
----
-
-## 2.1 Learner Reasoning Ownership Principle
-
-The Adaptive AI Onboarding Tutor must preserve the learner's intellectual ownership of the learning process.
-
-When a question, exercise, case study, or problem is intended to develop or evaluate a learner competency, the tutor must not immediately provide the final answer or complete solution, even if the learner explicitly requests it.
-
-In these situations, the tutor should prioritize:
-
-- guiding questions;
-- decomposition of the problem into smaller parts;
-- identification of relevant concepts;
-- progressive hints;
-- analogous examples that do not directly solve the current exercise;
-- requests for hypotheses and justification from the learner;
-- feedback on the learner's attempts.
-
-The objective is for the learner to construct the reasoning required to reach the solution rather than simply receive a ready-made answer.
-
-The level of assistance should increase progressively:
-
-**Problem**  
-→ learner attempt  
-→ guiding question  
-→ new attempt  
-→ conceptual hint  
-→ new attempt  
-→ problem decomposition, when necessary  
-→ feedback  
-→ solution refinement
-
-The tutor may explain concepts, definitions, tools, and knowledge required to solve a problem.
-
-However, it must distinguish between:
-
-**teaching the knowledge required to solve the problem**
-
-and
-
-**performing the core reasoning on behalf of the learner.**
-
-After the learner has produced a sufficiently developed attempt, the tutor may:
-
-- review the response;
-- identify errors;
-- explain why a particular reasoning path is problematic;
-- discuss alternatives;
-- explain trade-offs;
-- suggest tests;
-- demonstrate a better solution when doing so contributes to learning consolidation.
-
-Refusing to provide a ready-made solution must not create a pedagogical dead end.
-
-If the learner remains unable to progress, the tutor should gradually increase the level of support until learning can continue.
-
-The general principle is:
-
-> Provide the minimum amount of assistance required for the learner to continue constructing their own reasoning.
-
----
-
-## 3. Learning Horizons
-
-The learning journey is initially divided into three horizons:
-
-1. Initial Onboarding — 6 to 8 weeks;
-2. Next Phase — Increased Autonomy;
-3. Role Evolution — Advanced Competencies.
-
-A domain does not need to be fully completed to belong to the onboarding period.
-
-Some domains should begin during the first weeks and continue to develop afterward.
-
----
-
-## 4. Initial Onboarding — 6 to 8 Weeks
-
-The objective of this phase is to enable the analyst to:
-
-- understand the main concepts used by the team;
-- follow discussions related to Genesys Cloud and Contact Center operations;
-- recognize problems and decisions related to client scenarios;
-- understand where the data used by the team comes from;
-- perform basic data manipulation;
-- interpret operational metrics and descriptive statistics;
-- formulate plausible hypotheses and investigation paths;
-- produce or interpret simple data visualizations;
-- perform support tasks under supervision.
-
-The main domains in this phase are:
+The Learning Graph v0.2 contains seven formal Domains:
 
 1. Contact Center Fundamentals;
 2. Contact Center Metrics;
 3. Genesys Cloud;
 4. Genesys / Data Access;
-5. Basic Applied Programming;
-6. Basic Descriptive Statistics;
-7. Basic Data Visualization.
+5. Programming;
+6. Statistics;
+7. Data Visualization.
 
----
+Operational WFM, labor-regulation topics, Machine Learning, and advanced AI are post-onboarding.
 
-## 5. Onboarding Macro Structure
+## 4. Domain Inventory
 
-### 5.1 Contact Center Fundamentals
+### 4.1 Contact Center Fundamentals — 9 Concepts
 
-**Roadmap position:** beginning of onboarding.
+- Definition of a Contact Center;
+- Customer Interaction / Service;
+- Agents;
+- Queues;
+- Flows;
+- Operational Objectives;
+- Basic Interaction Journey;
+- ACD — Automatic Call Distribution;
+- Agent / ACD Skills.
 
-**Prerequisites:** no previous Contact Center knowledge required.
+### 4.2 Contact Center Metrics — 23 Concepts
 
-**Learning purpose:** establish the basic mental model of the business domain before progressing into metrics, platform concepts, and data.
-
-The learner should develop a minimum understanding of:
-
-- what a Contact Center is;
-- customer interactions;
-- agents;
-- queues;
-- flows;
-- operational objectives;
-- the basic customer interaction journey.
-
-This domain provides the main foundation for:
-
-- Contact Center Metrics;
-- Genesys Cloud.
-
----
-
-### 5.2 Contact Center Metrics
-
-**Main prerequisite:** Contact Center Fundamentals.
-
-**Roadmap position:** beginning of onboarding.
-
-The objective is to enable the learner to understand how Contact Center performance can be observed and measured.
-
-Relevant concepts include:
-
-- ACD;
-- ASA;
-- Service Level;
-- AHT;
-- ACW;
-- NPS;
-- Talk;
-- Hold;
-- Callback;
+- Offered;
+- Answer / Answered;
 - Abandonment;
-- Overflow.
+- Flow-out;
+- Flow Rate;
+- Flow Disconnect — Volume;
+- Flow Disconnect — Percentage;
+- Flow Retention;
+- Overflow;
+- Answer %;
+- Abandon %;
+- ASA — Average Speed of Answer;
+- Average Wait;
+- Service Level;
+- Talk Time;
+- Hold Time;
+- ACW — After Call Work;
+- AHT — Average Handle Time;
+- Repeat Contact;
+- FCR — First Contact Resolution;
+- CSAT — Customer Satisfaction;
+- Customer Effort Score;
+- NPS — Net Promoter Score.
 
-The learning process should consider two main contexts:
+`Flow Rate` and `Flow Retention` are project-defined derived operational concepts. Their formulas are not assumed to be universal and are not hard-coded in the graph.
 
-- operational monitoring / Control Desk;
-- deeper analytical investigation / Analytics.
+### 4.3 Genesys Cloud — 23 Concepts
 
-Contact Center Metrics and Genesys Cloud may partially develop in parallel once the initial fundamentals have been understood.
-
----
-
-### 5.3 Genesys Cloud
-
-**Main prerequisites:**
-
-- Contact Center Fundamentals;
-- basic Cloud and SaaS concepts.
-
-**Roadmap position:** beginning and middle of onboarding.
-
-The objective is to connect Contact Center concepts to the way they are implemented within Genesys Cloud.
-
-The learner should progressively understand:
-
-- the general operation of the platform;
-- interaction between queues and flows;
-- how an interaction is handled;
-- basic familiarity with the interface;
-- major product capabilities;
-- different capabilities available within the platform;
-- mechanisms used by Genesys Cloud to communicate and integrate with other systems.
-
-Concepts related to the following mechanisms should also be introduced:
-
-- REST APIs;
+- General Platform Operation;
+- Basic Genesys Interface;
+- Queue / Flow Interaction;
+- How an Interaction Works in Genesys;
+- Main Genesys Products;
+- Platform Capabilities;
+- Divisions — Organization and Access Control;
+- Integration Mechanisms;
+- Genesys Cloud REST APIs;
 - Data Actions;
 - Triggers;
-- Hooks.
-
-Intermediate or advanced Genesys Cloud capabilities may also be introduced when appropriate, including:
-
+- Webhooks and Notifications;
 - Campaigns;
-- WEM;
+- WEM — Workforce Engagement Management;
 - Evaluations;
-- WFM;
-- journey-related capabilities;
+- WFM — Product Overview;
+- Virtual Agent Fundamentals;
+- Speech and Text Analytics;
+- Sentiment;
+- Topics / Topic Spotting;
 - AI Scoring;
-- Speech & Analytics.
+- Containment;
+- Analytics Workspace and Performance Dashboards.
 
-Contact Center Metrics do not need to be completely mastered before Genesys Cloud learning begins.
-
-The two domains may partially develop in parallel.
-
----
-
-### 5.4 Genesys / Data Access
-
-**Main prerequisites:**
-
-- Contact Center Fundamentals;
-- Genesys Cloud;
-- understanding of the main Contact Center metrics;
-- basic concepts of system integration and API consumption.
-
-**Roadmap position:** middle of onboarding.
-
-The objective is to connect platform operation with the data used by the team.
-
-The learner should begin to understand how information available in Genesys Cloud can be retrieved and used for analysis.
-
-Relevant APIs and structures include:
+### 4.4 Genesys / Data Access — 11 Concepts
 
 - Conversations Details Query;
-- Conversations Attributes Search;
+- Conversation Participant Attributes Search;
 - Routing Skills;
 - Queues;
 - Flows;
 - Users;
 - Wrap-ups;
-- Divisions;
 - Outcomes;
 - Data Tables;
 - Transcript Search;
 - Users Details Query.
 
-Supporting concepts such as REST, JSON, request/response structures, and other integration fundamentals may be taught by the tutor whenever knowledge gaps are identified.
+Division data can be used through Data Access activities without creating a second `Divisions` Node.
 
----
+### 4.5 Programming — 12 Concepts
 
-## 6. Parallel Technical Competencies During Onboarding
+- Basic Python Structures;
+- Reading Simple Code;
+- Reading Python Lists;
+- Reading Python Dictionaries;
+- Reading Python Sets;
+- Reading NumPy Arrays;
+- Data Structures for Analysis;
+- Basic Data Manipulation;
+- Basic Pandas;
+- Basic SQL;
+- Reading Team Scripts;
+- Small Supervised Data Manipulations.
 
-Programming, Statistics, and Data Visualization should not necessarily begin only after the learner completes the Contact Center and Genesys domains.
+### 4.6 Statistics — 7 Concepts
 
-These competencies should progressively develop in parallel with business, platform, and data knowledge.
+- Mean;
+- Median;
+- Percentiles;
+- Variance;
+- Correlation;
+- Basic Distribution Interpretation;
+- p-value.
 
-Whenever appropriate, their learning should be connected to problems that resemble the professional context.
+### 4.7 Data Visualization — 9 Concepts
 
----
+- Chart Interpretation;
+- Bar Charts;
+- Column Charts;
+- Time Series;
+- Scatter Plots;
+- Basic Visualization Selection;
+- Introductory Gestalt Principles;
+- Visual Communication;
+- Simple Analytical Narrative.
 
-### 6.1 Basic Applied Programming
-
-**Phase:** begins during onboarding and continues into the next phase.
-
-The initial objective is not to develop an autonomous Python software developer.
-
-During onboarding, the learner should develop sufficient ability to:
-
-- understand simple code;
-- use basic Python structures;
-- perform basic data manipulation;
-- use Pandas for simple operations;
-- understand common data structures used in analysis;
-- understand and execute basic SQL applied to data;
-- follow scripts used by the team;
-- perform small data-processing tasks under supervision.
-
-Foundational concepts such as programming logic, variables, loops, data structures, or SQL fundamentals should be provided as supporting content when knowledge gaps are identified.
-
----
-
-### 6.2 Basic Descriptive Statistics
-
-**Phase:** onboarding.
-
-The objective is to enable appropriate interpretation of information produced by metrics and analyses.
-
-Concepts developed during this phase should include:
-
-- mean;
-- median;
-- percentiles;
-- variance;
-- correlation;
-- basic interpretation of distributions.
-
-The learner should begin to understand that a single measure does not necessarily provide an adequate description of the behavior of a dataset.
-
-Statistics should be developed as a tool for reasoning about data rather than merely as a collection of formulas.
-
----
-
-### 6.3 Basic Data Visualization
-
-**Phase:** begins during onboarding and continues afterward.
-
-The initial objective is to enable the learner to transform data and metrics into understandable visual representations.
-
-Fundamentals introduced during onboarding should include:
-
-- chart interpretation;
-- basic visualization selection;
-- bar charts;
-- column charts;
-- time series;
-- scatter plots;
-- introductory Gestalt principles;
-- visual communication;
-- basic narrative construction for an analysis.
-
-Tools such as Matplotlib and Streamlit may be introduced progressively according to the needs of the learning activities.
-
----
-
-## 7. Relationships Between Onboarding Domains
-
-The initial macro-level dependency structure is:
-
-**Contact Center Fundamentals**  
-→ Contact Center Metrics
-
-**Contact Center Fundamentals**  
-→ Genesys Cloud
-
-**Genesys Cloud**  
-→ Genesys / Data Access
-
-**Contact Center Metrics**  
-→ Genesys / Data Access
-
-**Basic Programming**  
-→ manipulation of data retrieved from Genesys Cloud
-
-**Basic Statistics**  
-→ interpretation of metrics and data
-
-**Genesys / Data Access + Programming + Statistics**  
-→ Data Analysis
-
-**Data Analysis + Data Visualization**  
-→ Ad-hoc Analysis
-
-**Ad-hoc Analysis + Business Knowledge**  
-→ Decision Support
-
-This structure does not represent a rigid sequence.
-
-After the initial fundamentals are established, several learning paths may progress in parallel.
-
----
-
-## 8. Conceptual Representation of the Onboarding Path
+Total:
 
 ```text
-                CONTACT CENTER FUNDAMENTALS
-                           |
-                +----------+----------+
-                |                     |
-                v                     v
-        CONTACT CENTER          GENESYS CLOUD
-            METRICS                  |
-                |                     |
-                +----------+----------+
-                           |
-                           v
-                GENESYS / DATA ACCESS
-                           |
-                +----------+----------+
-                |                     |
-                v                     v
-          PROGRAMMING            STATISTICS
-                |                     |
-                +----------+----------+
-                           |
-                           v
-                    DATA ANALYSIS
-                           |
-                           v
-                 DATA VISUALIZATION
-                           |
-                           v
-                    AD-HOC ANALYSIS
-                           |
-                           v
-                    DECISION SUPPORT
+7 Domains
+94 Concepts
+```
+
+## 5. Approved Domain Relationships
+
+```text
+Contact Center Fundamentals
+    prerequisite_for
+Contact Center Metrics
+
+Contact Center Fundamentals
+    prerequisite_for
+Genesys Cloud
+
+Contact Center Metrics
+    prerequisite_for
+Genesys / Data Access
+
+Genesys Cloud
+    prerequisite_for
+Genesys / Data Access
+```
+
+Independent Root Domains:
+
+```text
+Programming
+Statistics
+Data Visualization
+```
+
+Preferred entry point:
+
+```text
+Contact Center Fundamentals
+```
+
+## 6. Approved Concept Prerequisite Structure
+
+The YAML materializes each expression `A + B → C` as independent edges `A → C` and `B → C`.
+
+### 6.1 Contact Center Fundamentals
+
+```text
+Definition of a Contact Center
+    → Customer Interaction / Service
+    → Agents
+    → Queues
+    → Flows
+    → Operational Objectives
+
+Customer Interaction / Service + Queues + Flows
+    → Basic Interaction Journey
+
+Agents + Queues
+    → ACD
+
+Agents + ACD
+    → Agent / ACD Skills
+```
+
+### 6.2 Contact Center Metrics
+
+```text
+Offered
+    → Answered
+    → Abandonment
+    → Flow-out
+    → Overflow
+
+Offered + Flow-out
+    → Flow Rate
+
+Flow Disconnect Volume
+    → Flow Disconnect Percentage
+
+Flow Disconnect Volume + Flow Disconnect Percentage
+    → Flow Retention
+
+Offered + Answered
+    → Answer %
+
+Offered + Abandonment
+    → Abandon %
+
+Answered
+    → ASA
+    → Talk Time
+    → Hold Time
+    → ACW
+    → Repeat Contact
+    → CSAT
+    → NPS
+
+Answered + Abandonment + Flow-out
+    → Average Wait
+
+Answered + Offered
+    → Service Level
+
+Talk Time + Hold Time + ACW
+    → AHT
+
+Answered + Repeat Contact
+    → FCR
+```
+
+Customer Effort Score remains a Root Concept inside the Metrics Domain because this graph does not require another metric to be `sufficient` before CES can be understood.
+
+### 6.3 Genesys Cloud
+
+```text
+General Platform Operation
+    → Basic Interface
+    → Queue / Flow Interaction
+    → Main Products
+    → Platform Capabilities
+    → Divisions
+    → Integration Mechanisms
+
+Queue / Flow Interaction
+    → How an Interaction Works in Genesys
+
+Integration Mechanisms
+    → REST APIs
+    → Triggers
+    → Webhooks and Notifications
+
+REST APIs
+    → Data Actions
+
+Main Products
+    → Campaigns
+    → WEM
+    → Virtual Agent Fundamentals
+
+WEM
+    → Evaluations
+    → WFM Product Overview
+
+Platform Capabilities
+    → Speech and Text Analytics
+
+Speech and Text Analytics
+    → Sentiment
+    → Topics
+    → AI Scoring
+
+Evaluations
+    → AI Scoring
+
+Virtual Agent Fundamentals
+    → Containment
+
+Basic Interface + Platform Capabilities
+    → Analytics Workspace and Performance Dashboards
+```
+
+### 6.4 Genesys / Data Access
+
+```text
+Queues + Users + Flows + Wrap-ups
+    → Conversations Details Query
+
+Conversations Details Query
+    → Conversation Participant Attributes Search
+    → Transcript Search
+
+Flows
+    → Outcomes
+
+Users
+    → Users Details Query
+```
+
+Routing Skills and Data Tables remain Root Concepts inside this Domain.
+
+### 6.5 Programming
+
+```text
+Basic Python Structures
+    → Reading Simple Code
+    → Reading Lists
+    → Reading Dictionaries
+    → Reading Sets
+
+Reading Lists
+    → Reading NumPy Arrays
+
+Reading Lists + Reading Dictionaries + Reading Sets + Reading NumPy Arrays
+    → Data Structures for Analysis
+
+Data Structures for Analysis
+    → Basic Data Manipulation
+    → Basic Pandas
+
+Reading Simple Code
+    → Reading Team Scripts
+
+Basic Pandas + Reading Team Scripts
+    → Small Supervised Data Manipulations
+```
+
+Basic SQL remains a Root Concept in this Domain.
+
+### 6.6 Statistics
+
+```text
+Mean
+    → Variance
+
+Variance
+    → Correlation
+
+Mean + Median + Percentiles + Variance
+    → Basic Distribution Interpretation
+
+Basic Distribution Interpretation
+    → p-value
+```
+
+### 6.7 Data Visualization
+
+```text
+Chart Interpretation
+    → Bar Charts
+    → Column Charts
+    → Time Series
+    → Scatter Plots
+
+Bar Charts + Column Charts + Time Series + Scatter Plots
+    → Basic Visualization Selection
+
+Basic Visualization Selection + Introductory Gestalt Principles
+    → Visual Communication
+
+Visual Communication
+    → Simple Analytical Narrative
+```
+
+## 7. Runtime Layers
+
+`layer` is derived from incoming prerequisites and is **not** stored in the YAML.
+
+```text
+no incoming Concept prerequisite
+→ layer 0
+
+otherwise
+→ 1 + max(layer of direct prerequisites)
+```
+
+The Progression Engine works on the lowest incomplete layer inside the active Domain.
+
+## 8. Post-Onboarding
+
+The following areas remain outside Learning Graph v0.2:
+
+- operational Workforce Management;
+- forecasting;
+- staffing;
+- scheduling;
+- adherence;
+- occupancy;
+- labor-regulation topics;
+- Machine Learning;
+- advanced Artificial Intelligence.
+
+The public design may later model those areas in separate, versioned learning paths.
+
+## 9. Document State
+
+- Public document version: `v0.2`
+- Reference graph version: `0.2`
+- YAML schema version: `0.1`
+- Status: approved for YAML materialization
