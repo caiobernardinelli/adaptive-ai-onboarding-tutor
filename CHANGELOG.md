@@ -4,6 +4,34 @@ All notable changes to this project will be documented in this file.
 
 The project is currently in early development. Entries are organized chronologically to document the evolution of product, learning architecture, and technical implementation.
 
+## 2026-08-31
+
+### Added
+
+- Consolidated the public Learning Graph v0.2 baseline with 7 Domains and 94 Concepts.
+- Added formal Concept prerequisite relationships and runtime-derived Concept-layer behavior.
+- Added agent / ACD skills and expanded Contact Center metric coverage.
+- Added Flow Disconnect volume and percentage, Customer Effort Score, and project-defined derived flow-performance concepts.
+- Added Genesys Cloud Divisions, Webhooks and Notifications, Virtual Agent, Speech and Text Analytics, Sentiment, Topics, Containment, and Analytics Workspace / Performance Dashboards.
+- Expanded Programming with Python lists, dictionaries, sets, NumPy arrays, Pandas, SQL, and script-reading concepts.
+- Added introductory p-value to the onboarding Statistics Domain.
+- Added public architecture and project-overview documentation.
+- Added a public/private confidentiality boundary for the portfolio repository.
+
+### Changed
+
+- Moved ACD from Contact Center Metrics to Contact Center Fundamentals.
+- Updated the Data Access model to avoid duplicating Divisions as a formal Concept.
+- Updated `Conversations Attributes Search` to `Conversation Participant Attributes Search`.
+- Removed `domain_id` from the Learning Graph Concept schema; Concept membership is represented only through `contains`.
+- Moved operational Workforce Management to post-onboarding while keeping a product-level WFM overview inside Genesys Cloud.
+- Kept Machine Learning and advanced Artificial Intelligence outside the initial onboarding graph.
+- Clarified version separation among Product/MVP v0.1, YAML schema 0.1, Learning Graph 0.2, and public documentation milestone v0.2.
+
+### Current engineering milestone
+
+- `YAML → Loader → Validator → Tests`.
+
 ## 2026-08-25
 
 ### Added
