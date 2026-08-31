@@ -211,205 +211,197 @@ Contact Center Fundamentals
 
 ## 6. Approved Concept Prerequisite Structure
 
-The YAML materializes each expression `A + B → C` as independent edges `A → C` and `B → C`.
+Every line below represents exactly one `CONCEPT → prerequisite_for → CONCEPT` relationship in the YAML. The public documentation lists each edge explicitly to avoid ambiguity between a dependency fan-out and a sequential chain.
 
-### 6.1 Contact Center Fundamentals
+### 6.1 Contact Center Fundamentals — 12 edges
 
 ```text
-Definition of a Contact Center
-    → Customer Interaction / Service
-    → Agents
-    → Queues
-    → Flows
-    → Operational Objectives
+Definition of a Contact Center → Customer Interaction / Service
+Definition of a Contact Center → Agents
+Definition of a Contact Center → Queues
+Definition of a Contact Center → Flows
+Definition of a Contact Center → Operational Objectives
 
-Customer Interaction / Service + Queues + Flows
-    → Basic Interaction Journey
+Customer Interaction / Service → Basic Interaction Journey
+Queues → Basic Interaction Journey
+Flows → Basic Interaction Journey
 
-Agents + Queues
-    → ACD
+Agents → ACD
+Queues → ACD
 
-Agents + ACD
-    → Agent / ACD Skills
+Agents → Agent / ACD Skills
+ACD → Agent / ACD Skills
 ```
 
-### 6.2 Contact Center Metrics
+### 6.2 Contact Center Metrics — 30 edges
 
 ```text
-Offered
-    → Answered
-    → Abandonment
-    → Flow-out
-    → Overflow
+Offered → Answered
+Offered → Abandonment
+Offered → Flow-out
+Offered → Overflow
 
-Offered + Flow-out
-    → Flow Rate
+Offered → Flow Rate
+Flow-out → Flow Rate
 
-Flow Disconnect Volume
-    → Flow Disconnect Percentage
+Flow Disconnect Volume → Flow Disconnect Percentage
 
-Flow Disconnect Volume + Flow Disconnect Percentage
-    → Flow Retention
+Flow Disconnect Volume → Flow Retention
+Flow Disconnect Percentage → Flow Retention
 
-Offered + Answered
-    → Answer %
+Offered → Answer %
+Answered → Answer %
 
-Offered + Abandonment
-    → Abandon %
+Offered → Abandon %
+Abandonment → Abandon %
 
-Answered
-    → ASA
-    → Talk Time
-    → Hold Time
-    → ACW
-    → Repeat Contact
-    → CSAT
-    → NPS
+Answered → ASA
 
-Answered + Abandonment + Flow-out
-    → Average Wait
+Answered → Average Wait
+Abandonment → Average Wait
+Flow-out → Average Wait
 
-Answered + Offered
-    → Service Level
+Answered → Service Level
+Offered → Service Level
 
-Talk Time + Hold Time + ACW
-    → AHT
+Answered → Talk Time
+Answered → Hold Time
+Answered → ACW
 
-Answered + Repeat Contact
-    → FCR
+Talk Time → AHT
+Hold Time → AHT
+ACW → AHT
+
+Answered → Repeat Contact
+
+Answered → FCR
+Repeat Contact → FCR
+
+Answered → CSAT
+Answered → NPS
 ```
 
 Customer Effort Score remains a Root Concept inside the Metrics Domain because this graph does not require another metric to be `sufficient` before CES can be understood.
 
-### 6.3 Genesys Cloud
+### 6.3 Genesys Cloud — 24 edges
 
 ```text
-General Platform Operation
-    → Basic Interface
-    → Queue / Flow Interaction
-    → Main Products
-    → Platform Capabilities
-    → Divisions
-    → Integration Mechanisms
+General Platform Operation → Basic Interface
+General Platform Operation → Queue / Flow Interaction
+General Platform Operation → Main Products
+General Platform Operation → Platform Capabilities
+General Platform Operation → Divisions
+General Platform Operation → Integration Mechanisms
 
-Queue / Flow Interaction
-    → How an Interaction Works in Genesys
+Queue / Flow Interaction → How an Interaction Works in Genesys
 
-Integration Mechanisms
-    → REST APIs
-    → Triggers
-    → Webhooks and Notifications
+Integration Mechanisms → REST APIs
+Integration Mechanisms → Triggers
+Integration Mechanisms → Webhooks and Notifications
 
-REST APIs
-    → Data Actions
+REST APIs → Data Actions
 
-Main Products
-    → Campaigns
-    → WEM
-    → Virtual Agent Fundamentals
+Main Products → Campaigns
+Main Products → WEM
+Main Products → Virtual Agent Fundamentals
 
-WEM
-    → Evaluations
-    → WFM Product Overview
+WEM → Evaluations
+WEM → WFM Product Overview
 
-Platform Capabilities
-    → Speech and Text Analytics
+Platform Capabilities → Speech and Text Analytics
 
-Speech and Text Analytics
-    → Sentiment
-    → Topics
-    → AI Scoring
+Speech and Text Analytics → Sentiment
+Speech and Text Analytics → Topics
+Speech and Text Analytics → AI Scoring
 
-Evaluations
-    → AI Scoring
+Evaluations → AI Scoring
 
-Virtual Agent Fundamentals
-    → Containment
+Virtual Agent Fundamentals → Containment
 
-Basic Interface + Platform Capabilities
-    → Analytics Workspace and Performance Dashboards
+Basic Interface → Analytics Workspace and Performance Dashboards
+Platform Capabilities → Analytics Workspace and Performance Dashboards
 ```
 
-### 6.4 Genesys / Data Access
+### 6.4 Genesys / Data Access — 8 edges
 
 ```text
-Queues + Users + Flows + Wrap-ups
-    → Conversations Details Query
+Queues → Conversations Details Query
+Users → Conversations Details Query
+Flows → Conversations Details Query
+Wrap-ups → Conversations Details Query
 
-Conversations Details Query
-    → Conversation Participant Attributes Search
-    → Transcript Search
+Conversations Details Query → Conversation Participant Attributes Search
+Conversations Details Query → Transcript Search
 
-Flows
-    → Outcomes
-
-Users
-    → Users Details Query
+Flows → Outcomes
+Users → Users Details Query
 ```
 
 Routing Skills and Data Tables remain Root Concepts inside this Domain.
 
-### 6.5 Programming
+### 6.5 Programming — 14 edges
 
 ```text
-Basic Python Structures
-    → Reading Simple Code
-    → Reading Lists
-    → Reading Dictionaries
-    → Reading Sets
+Basic Python Structures → Reading Simple Code
+Basic Python Structures → Reading Lists
+Basic Python Structures → Reading Dictionaries
+Basic Python Structures → Reading Sets
 
-Reading Lists
-    → Reading NumPy Arrays
+Reading Lists → Reading NumPy Arrays
 
-Reading Lists + Reading Dictionaries + Reading Sets + Reading NumPy Arrays
-    → Data Structures for Analysis
+Reading Lists → Data Structures for Analysis
+Reading Dictionaries → Data Structures for Analysis
+Reading Sets → Data Structures for Analysis
+Reading NumPy Arrays → Data Structures for Analysis
 
-Data Structures for Analysis
-    → Basic Data Manipulation
-    → Basic Pandas
+Data Structures for Analysis → Basic Data Manipulation
+Basic Data Manipulation → Basic Pandas
 
-Reading Simple Code
-    → Reading Team Scripts
+Reading Simple Code → Reading Team Scripts
 
-Basic Pandas + Reading Team Scripts
-    → Small Supervised Data Manipulations
+Basic Pandas → Small Supervised Data Manipulations
+Reading Team Scripts → Small Supervised Data Manipulations
 ```
 
 Basic SQL remains a Root Concept in this Domain.
 
-### 6.6 Statistics
+### 6.6 Statistics — 7 edges
 
 ```text
-Mean
-    → Variance
+Mean → Variance
+Variance → Correlation
 
-Variance
-    → Correlation
+Mean → Basic Distribution Interpretation
+Median → Basic Distribution Interpretation
+Percentiles → Basic Distribution Interpretation
+Variance → Basic Distribution Interpretation
 
-Mean + Median + Percentiles + Variance
-    → Basic Distribution Interpretation
-
-Basic Distribution Interpretation
-    → p-value
+Basic Distribution Interpretation → p-value
 ```
 
-### 6.7 Data Visualization
+### 6.7 Data Visualization — 11 edges
 
 ```text
-Chart Interpretation
-    → Bar Charts
-    → Column Charts
-    → Time Series
-    → Scatter Plots
+Chart Interpretation → Bar Charts
+Chart Interpretation → Column Charts
+Chart Interpretation → Time Series
+Chart Interpretation → Scatter Plots
 
-Bar Charts + Column Charts + Time Series + Scatter Plots
-    → Basic Visualization Selection
+Bar Charts → Basic Visualization Selection
+Column Charts → Basic Visualization Selection
+Time Series → Basic Visualization Selection
+Scatter Plots → Basic Visualization Selection
 
-Basic Visualization Selection + Introductory Gestalt Principles
-    → Visual Communication
+Basic Visualization Selection → Visual Communication
+Introductory Gestalt Principles → Visual Communication
 
-Visual Communication
-    → Simple Analytical Narrative
+Visual Communication → Simple Analytical Narrative
+```
+
+Total formal Concept prerequisites:
+
+```text
+12 + 30 + 24 + 8 + 14 + 7 + 11 = 106
 ```
 
 ## 7. Runtime Layers
