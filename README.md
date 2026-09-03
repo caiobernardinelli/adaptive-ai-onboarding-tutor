@@ -260,59 +260,50 @@ Once a graph version is used by a learner enrollment, that graph version should 
 
 ## Current Engineering Milestone
 
-The current implementation milestone is deliberately constrained to:
+The executable baseline currently includes:
 
 ```text
-YAML
-→ Loader
-→ Validator
-→ Tests
-```
-
-The intended implementation order is:
-
-```text
-YAML schema
-→ Graph Loader
-→ Graph Validator
-→ SQLite schema
-→ Data Access Layer
-→ State Calculation
-→ Progression Decision
-→ Tutor Orchestrator
-→ LLM Integration
-```
-
-The repository should not claim persistence, progression, orchestration, RAG, or agent capabilities as implemented until the corresponding code and tests exist.
+Learning Graph YAML v0.2
+        ↓
+Learning Graph Loader
+        ↓
+Graph Validator
+        ↓
+38 automated tests
+        ↓
+SQLite persistence foundation
+        ├── learners
+        ├── enrollments
+        └── learner_progress
 
 ---
-
 ## Repository Structure
+
+
+E na árvore de **Repository Structure**, use:
 
 ```text
 adaptive-ai-onboarding-tutor/
 ├── README.md
 ├── CHANGELOG.md
+├── .gitignore
+├── data/
+│   └── .gitkeep
 ├── docs/
-│   ├── PRODUCT.md
-│   ├── ROLE_PROFILE.md
-│   ├── LEARNING_MAP.md
-│   ├── TUTOR_POLICY.md
-│   ├── LEARNING_GRAPH_SPEC.md
-│   ├── PROJECT_OVERVIEW.md
-│   ├── ARCHITECTURE.md
-│   └── RELEASE_NOTES_v0_2.md
 ├── learning_graphs/
+│   └── junior_data_analyst_onboarding_v0_2.yaml
 ├── src/
-│   └── learning_graph/
-│       ├── loader.py
-│       └── validator.py
+│   ├── learning_graph/
+│   │   ├── loader.py
+│   │   └── validator.py
+│   └── persistence/
+│       ├── __init__.py
+│       ├── init_db.py
+│       └── schema.sql
 └── tests/
+    ├── test_learning_graph_integration.py
     ├── test_loader.py
     └── test_validator.py
-```
-
-Some implementation directories will appear only when the corresponding milestone is committed.
 
 ---
 
@@ -359,16 +350,13 @@ AI-product design:
 
 ## Status
 
-**Learning Graph v0.2 design baseline approved.**
+**Learning Graph v0.2 executable baseline complete.**
 
-Current work:
+Implemented and verified:
 
 ```text
-final YAML v0.2
-→ Loader contract
-→ Loader tests
-→ Graph Validator
-→ Validator tests
-```
-
-The project is under active development. Documentation may describe target behavior, but implemented behavior is claimed only after code and tests exist.
+public Learning Graph YAML
+→ Loader
+→ Validator
+→ 38 automated tests
+→ SQLite persistence foundation

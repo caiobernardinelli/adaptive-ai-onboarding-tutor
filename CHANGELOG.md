@@ -4,6 +4,44 @@ All notable changes to this project will be documented in this file.
 
 The project is currently in early development. Entries are organized chronologically to document the evolution of product, learning architecture, and technical implementation.
 
+
+### 3. CHANGELOG
+
+```markdown
+## 2026-09-03
+
+### Added
+
+- Added the executable public Learning Graph v0.2.
+- Added the Learning Graph Loader and deterministic Graph Validator.
+- Added 38 automated tests covering Loader behavior, Validator rules, and full public Learning Graph integration.
+- Added the initial SQLite persistence foundation using Python's standard `sqlite3` module.
+- Added `learners`, `enrollments`, and `learner_progress` tables.
+- Added foreign-key integrity for learner/enrollment relationships.
+- Added a partial unique index enforcing at most one active enrollment per learner, graph, and graph version.
+- Added a public database bootstrap script using `adaptive_onboarding_tutor.db`.
+- Added Git rules excluding runtime SQLite database files.
+
+### Changed
+
+- Converted public Validator messages, comments, fixtures, and tests to English while preserving the approved validation rules and error codes.
+- Adapted the reference Learning Graph to a public English portfolio version without employer-internal content.
+- Updated the implementation milestone from Learning Graph validation to the SQLite persistence foundation.
+
+### Verification
+
+- `38 passed` for the Learning Graph, Loader, Validator, and integration test suite.
+- SQLite bootstrap manually verified with foreign keys enabled.
+- Verified creation of `learners`, `enrollments`, and `learner_progress`.
+- Verified `ux_enrollments_one_active_per_graph_version`.
+- Confirmed runtime `.db` files are excluded from version control.
+
+### Next engineering milestone
+
+- Automated persistence tests.
+- `learner_state`.
+- Data Access Layer.
+
 ## 2026-08-31
 
 ### Added
