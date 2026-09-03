@@ -197,7 +197,7 @@ def test_list_fields_with_invalid_types_return_errors():
 
 def test_unknown_root_field_returns_error():
     graph = make_valid_graph()
-    graph["author"] = "Caio"
+    graph["author"] = "Example Author"
 
     errors = validate_learning_graph(graph)
 

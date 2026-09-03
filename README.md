@@ -275,12 +275,31 @@ SQLite persistence foundation
         ├── learners
         ├── enrollments
         └── learner_progress
+```
+
+The Learning Graph, Loader, Validator, and full public graph integration are covered by **38 automated tests**.
+
+The current SQLite bootstrap and relational constraints have been **manually verified**. Automated persistence tests are the next persistence milestone.
+
+The intended implementation order remains:
+
+```text
+YAML schema
+→ Graph Loader
+→ Graph Validator
+→ SQLite schema
+→ Data Access Layer
+→ State Calculation
+→ Progression Decision
+→ Tutor Orchestrator
+→ LLM Integration
+```
+
+The project does not yet claim an implemented Data Access Layer, Learner State calculation, Progression Engine, Tutor Orchestrator, RAG pipeline, or agent capability.
 
 ---
+
 ## Repository Structure
-
-
-E na árvore de **Repository Structure**, use:
 
 ```text
 adaptive-ai-onboarding-tutor/
@@ -290,6 +309,14 @@ adaptive-ai-onboarding-tutor/
 ├── data/
 │   └── .gitkeep
 ├── docs/
+│   ├── PRODUCT.md
+│   ├── ROLE_PROFILE.md
+│   ├── LEARNING_MAP.md
+│   ├── TUTOR_POLICY.md
+│   ├── LEARNING_GRAPH_SPEC.md
+│   ├── PROJECT_OVERVIEW.md
+│   ├── ARCHITECTURE.md
+│   └── RELEASE_NOTES_v0_2.md
 ├── learning_graphs/
 │   └── junior_data_analyst_onboarding_v0_2.yaml
 ├── src/
@@ -304,6 +331,9 @@ adaptive-ai-onboarding-tutor/
     ├── test_learning_graph_integration.py
     ├── test_loader.py
     └── test_validator.py
+```
+
+Additional implementation directories will appear only when the corresponding milestone is developed and verified.
 
 ---
 
@@ -360,3 +390,26 @@ public Learning Graph YAML
 → Validator
 → 38 automated tests
 → SQLite persistence foundation
+```
+
+The current SQLite schema includes:
+
+```text
+learners
+enrollments
+learner_progress
+```
+
+Runtime database files remain local and are excluded from version control.
+
+The SQLite foundation currently provides structural persistence only. Automated persistence tests, `learner_state`, and the Data Access Layer are not yet implemented.
+
+Next engineering milestone:
+
+```text
+automated persistence tests
+→ learner_state
+→ Data Access Layer
+```
+
+The project is under active development. Documentation may describe target behavior, but implemented behavior is claimed only after the corresponding executable artifact has been created and verified.

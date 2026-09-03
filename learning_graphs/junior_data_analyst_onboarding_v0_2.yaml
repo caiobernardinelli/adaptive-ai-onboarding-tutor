@@ -7,7 +7,8 @@ domains:
   name: Contact Center Fundamentals
   description: Foundational operational concepts used to understand how a contact center organizes customer
     interactions, routing, agents, queues, flows, and service objectives.
-  learning_objective: The learner should be able to explain the main operational components of a contact
+  learning_objective: The learner
+   should be able to explain the main operational components of a contact
     center, relate them to one another, and reconstruct a plausible end-to-end customer-interaction scenario.
 - id: contact_center_metrics
   name: Contact Center Metrics
@@ -383,7 +384,7 @@ concepts:
     to operations and analytics.
   learning_objective: The learner should be able to explain the purpose of Containment, relate it to relevant
     Genesys Cloud workflows, and identify a plausible operational or analytical use case.
-- id: analytics_workspace_e_performance_dashboards
+- id: analytics_workspace_and_performance_dashboards
   name: Analytics Workspace and Performance Dashboards
   description: Introduces Analytics Workspace and Performance Dashboards as a public Genesys Cloud capability
     or platform concept relevant to operations and analytics.
@@ -786,7 +787,7 @@ relationships:
   to: containment
   type: contains
 - from: genesys_cloud
-  to: analytics_workspace_e_performance_dashboards
+  to: analytics_workspace_and_performance_dashboards
   type: contains
 - from: genesys_data_access
   to: conversations_details_query
@@ -1110,10 +1111,10 @@ relationships:
   to: containment
   type: prerequisite_for
 - from: genesys_cloud_interface_basics
-  to: analytics_workspace_e_performance_dashboards
+  to: analytics_workspace_and_performance_dashboards
   type: prerequisite_for
 - from: platform_capabilities
-  to: analytics_workspace_e_performance_dashboards
+  to: analytics_workspace_and_performance_dashboards
   type: prerequisite_for
 - from: queues_data
   to: conversations_details_query

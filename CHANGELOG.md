@@ -4,10 +4,6 @@ All notable changes to this project will be documented in this file.
 
 The project is currently in early development. Entries are organized chronologically to document the evolution of product, learning architecture, and technical implementation.
 
-
-### 3. CHANGELOG
-
-```markdown
 ## 2026-09-03
 
 ### Added
