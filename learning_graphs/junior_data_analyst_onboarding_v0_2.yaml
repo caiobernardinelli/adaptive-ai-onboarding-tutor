@@ -7,8 +7,7 @@ domains:
   name: Contact Center Fundamentals
   description: Foundational operational concepts used to understand how a contact center organizes customer
     interactions, routing, agents, queues, flows, and service objectives.
-  learning_objective: The learner
-   should be able to explain the main operational components of a contact
+  learning_objective: The learner should be able to explain the main operational components of a contact
     center, relate them to one another, and reconstruct a plausible end-to-end customer-interaction scenario.
 - id: contact_center_metrics
   name: Contact Center Metrics
