@@ -260,16 +260,28 @@ Once a graph version is used by a learner enrollment, that graph version should 
 
 ## Current Engineering Milestone
 
-The current implementation milestone is deliberately constrained to:
+The executable baseline currently includes:
 
 ```text
-YAML
-→ Loader
-→ Validator
-→ Tests
+Learning Graph YAML v0.2
+        ↓
+Learning Graph Loader
+        ↓
+Graph Validator
+        ↓
+38 automated tests
+        ↓
+SQLite persistence foundation
+        ├── learners
+        ├── enrollments
+        └── learner_progress
 ```
 
-The intended implementation order is:
+The Learning Graph, Loader, Validator, and full public graph integration are covered by **38 automated tests**.
+
+The current SQLite bootstrap and relational constraints have been **manually verified**. Automated persistence tests are the next persistence milestone.
+
+The intended implementation order remains:
 
 ```text
 YAML schema
@@ -283,7 +295,7 @@ YAML schema
 → LLM Integration
 ```
 
-The repository should not claim persistence, progression, orchestration, RAG, or agent capabilities as implemented until the corresponding code and tests exist.
+The project does not yet claim an implemented Data Access Layer, Learner State calculation, Progression Engine, Tutor Orchestrator, RAG pipeline, or agent capability.
 
 ---
 
@@ -293,6 +305,9 @@ The repository should not claim persistence, progression, orchestration, RAG, or
 adaptive-ai-onboarding-tutor/
 ├── README.md
 ├── CHANGELOG.md
+├── .gitignore
+├── data/
+│   └── .gitkeep
 ├── docs/
 │   ├── PRODUCT.md
 │   ├── ROLE_PROFILE.md
@@ -303,16 +318,22 @@ adaptive-ai-onboarding-tutor/
 │   ├── ARCHITECTURE.md
 │   └── RELEASE_NOTES_v0_2.md
 ├── learning_graphs/
+│   └── junior_data_analyst_onboarding_v0_2.yaml
 ├── src/
-│   └── learning_graph/
-│       ├── loader.py
-│       └── validator.py
+│   ├── learning_graph/
+│   │   ├── loader.py
+│   │   └── validator.py
+│   └── persistence/
+│       ├── __init__.py
+│       ├── init_db.py
+│       └── schema.sql
 └── tests/
+    ├── test_learning_graph_integration.py
     ├── test_loader.py
     └── test_validator.py
 ```
 
-Some implementation directories will appear only when the corresponding milestone is committed.
+Additional implementation directories will appear only when the corresponding milestone is developed and verified.
 
 ---
 
@@ -359,16 +380,36 @@ AI-product design:
 
 ## Status
 
-**Learning Graph v0.2 design baseline approved.**
+**Learning Graph v0.2 executable baseline complete.**
 
-Current work:
+Implemented and verified:
 
 ```text
-final YAML v0.2
-→ Loader contract
-→ Loader tests
-→ Graph Validator
-→ Validator tests
+public Learning Graph YAML
+→ Loader
+→ Validator
+→ 38 automated tests
+→ SQLite persistence foundation
 ```
 
-The project is under active development. Documentation may describe target behavior, but implemented behavior is claimed only after code and tests exist.
+The current SQLite schema includes:
+
+```text
+learners
+enrollments
+learner_progress
+```
+
+Runtime database files remain local and are excluded from version control.
+
+The SQLite foundation currently provides structural persistence only. Automated persistence tests, `learner_state`, and the Data Access Layer are not yet implemented.
+
+Next engineering milestone:
+
+```text
+automated persistence tests
+→ learner_state
+→ Data Access Layer
+```
+
+The project is under active development. Documentation may describe target behavior, but implemented behavior is claimed only after the corresponding executable artifact has been created and verified.

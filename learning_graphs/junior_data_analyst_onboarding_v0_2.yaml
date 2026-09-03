@@ -1,0 +1,1237 @@
+schema_version: '0.1'
+graph_id: junior_data_analyst_onboarding
+graph_version: '0.2'
+primary_entry_domain: contact_center_fundamentals
+domains:
+- id: contact_center_fundamentals
+  name: Contact Center Fundamentals
+  description: Foundational operational concepts used to understand how a contact center organizes customer
+    interactions, routing, agents, queues, flows, and service objectives.
+  learning_objective: The learner should be able to explain the main operational components of a contact
+    center, relate them to one another, and reconstruct a plausible end-to-end customer-interaction scenario.
+- id: contact_center_metrics
+  name: Contact Center Metrics
+  description: Core operational and customer-experience metrics used to interpret contact-center performance
+    and connect individual indicators to broader operational scenarios.
+  learning_objective: The learner should be able to explain the main contact-center metrics, relate them
+    to operational events, and interpret combinations of metrics in plausible analytical scenarios.
+- id: genesys_cloud
+  name: Genesys Cloud
+  description: Public reference concepts for understanding Genesys Cloud as a customer-experience platform,
+    including navigation, routing, integration, analytics, workforce, and AI-assisted capabilities.
+  learning_objective: The learner should be able to explain the main public Genesys Cloud capability areas
+    and relate platform components to routing, operations, analytics, integrations, and customer-experience
+    workflows.
+- id: genesys_data_access
+  name: Genesys / Data Access
+  description: Public reference concepts for locating and consuming Genesys Cloud data through documented
+    data-access surfaces, with emphasis on analytical use rather than employer-specific implementations.
+  learning_objective: The learner should be able to distinguish common public Genesys Cloud data-access
+    surfaces, identify the kind of information they expose, and choose plausible sources for analytical
+    questions.
+- id: programming
+  name: Programming
+  description: Programming foundations used by a junior data analyst to read, understand, and perform
+    small data-oriented changes in Python, Pandas, NumPy, and SQL.
+  learning_objective: The learner should be able to read and explain simple data-oriented code, identify
+    common Python and SQL structures, and perform small supervised transformations without losing sight
+    of the business question.
+- id: statistics
+  name: Statistics
+  description: Introductory statistical concepts used to summarize data, reason about variation and relationships,
+    and interpret analytical results.
+  learning_objective: The learner should be able to explain and interpret introductory statistical measures
+    and use them appropriately when reasoning about operational data.
+- id: data_visualization
+  name: Data Visualization
+  description: Foundations for reading, selecting, and communicating data visualizations clearly in analytical
+    work.
+  learning_objective: The learner should be able to interpret common charts, choose simple visual encodings
+    for analytical questions, and communicate findings in a clear visual narrative.
+concepts:
+- id: contact_center_definition
+  name: Contact Center Definition
+  description: Introduces Contact Center Definition as a foundational contact-center concept and its role
+    in a generic customer-service operation.
+  learning_objective: The learner should be able to explain Contact Center Definition, relate it to other
+    contact-center components, and apply it to a plausible operational scenario.
+- id: customer_interaction
+  name: Customer Interaction
+  description: Introduces Customer Interaction as a foundational contact-center concept and its role in
+    a generic customer-service operation.
+  learning_objective: The learner should be able to explain Customer Interaction, relate it to other contact-center
+    components, and apply it to a plausible operational scenario.
+- id: agents
+  name: Agents
+  description: Introduces Agents as a foundational contact-center concept and its role in a generic customer-service
+    operation.
+  learning_objective: The learner should be able to explain Agents, relate it to other contact-center
+    components, and apply it to a plausible operational scenario.
+- id: queues
+  name: Queues
+  description: Introduces Queues as a foundational contact-center concept and its role in a generic customer-service
+    operation.
+  learning_objective: The learner should be able to explain Queues, relate it to other contact-center
+    components, and apply it to a plausible operational scenario.
+- id: flows
+  name: Flows
+  description: Introduces Flows as a foundational contact-center concept and its role in a generic customer-service
+    operation.
+  learning_objective: The learner should be able to explain Flows, relate it to other contact-center components,
+    and apply it to a plausible operational scenario.
+- id: operational_objectives
+  name: Operational Objectives
+  description: Introduces Operational Objectives as a foundational contact-center concept and its role
+    in a generic customer-service operation.
+  learning_objective: The learner should be able to explain Operational Objectives, relate it to other
+    contact-center components, and apply it to a plausible operational scenario.
+- id: basic_customer_service_journey
+  name: Basic Customer-Service Journey
+  description: Introduces Basic Customer-Service Journey as a foundational contact-center concept and
+    its role in a generic customer-service operation.
+  learning_objective: The learner should be able to explain Basic Customer-Service Journey, relate it
+    to other contact-center components, and apply it to a plausible operational scenario.
+- id: acd
+  name: ACD — Automatic Call Distribution
+  description: Introduces ACD — Automatic Call Distribution as a foundational contact-center concept and
+    its role in a generic customer-service operation.
+  learning_objective: The learner should be able to explain ACD — Automatic Call Distribution, relate
+    it to other contact-center components, and apply it to a plausible operational scenario.
+- id: agent_skills
+  name: Agent Skills / ACD Skills
+  description: Introduces Agent Skills / ACD Skills as a foundational contact-center concept and its role
+    in a generic customer-service operation.
+  learning_objective: The learner should be able to explain Agent Skills / ACD Skills, relate it to other
+    contact-center components, and apply it to a plausible operational scenario.
+- id: offered
+  name: Offered
+  description: Introduces Offered as an operational or customer-experience measure used to interpret contact-center
+    performance.
+  learning_objective: The learner should be able to explain Offered, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: answered
+  name: Answered
+  description: Introduces Answered as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain Answered, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: abandonment
+  name: Abandonment
+  description: Introduces Abandonment as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain Abandonment, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: flow_out
+  name: Flow-out
+  description: Introduces Flow-out as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain Flow-out, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: flow_rate
+  name: Flow Rate
+  description: Introduces Flow Rate as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain Flow Rate, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: flow_disconnect_volume
+  name: Flow Disconnect — Volume
+  description: Introduces Flow Disconnect — Volume as an operational or customer-experience measure used
+    to interpret contact-center performance.
+  learning_objective: The learner should be able to explain Flow Disconnect — Volume, relate it to relevant
+    operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: flow_disconnect_percentage
+  name: Flow Disconnect — Percentage
+  description: Introduces Flow Disconnect — Percentage as an operational or customer-experience measure
+    used to interpret contact-center performance.
+  learning_objective: The learner should be able to explain Flow Disconnect — Percentage, relate it to
+    relevant operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: call_retention_in_flow
+  name: Call Retention in Flow
+  description: Introduces Call Retention in Flow as an operational or customer-experience measure used
+    to interpret contact-center performance.
+  learning_objective: The learner should be able to explain Call Retention in Flow, relate it to relevant
+    operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: overflow
+  name: Overflow
+  description: Introduces Overflow as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain Overflow, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: answer_percent
+  name: Answer %
+  description: Introduces Answer % as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain Answer %, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: abandon_percent
+  name: Abandon %
+  description: Introduces Abandon % as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain Abandon %, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: asa
+  name: ASA — Average Speed of Answer
+  description: Introduces ASA — Average Speed of Answer as an operational or customer-experience measure
+    used to interpret contact-center performance.
+  learning_objective: The learner should be able to explain ASA — Average Speed of Answer, relate it to
+    relevant operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: average_wait
+  name: Average Wait
+  description: Introduces Average Wait as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain Average Wait, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: service_level
+  name: Service Level
+  description: Introduces Service Level as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain Service Level, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: talk_time
+  name: TALK — Talk Time
+  description: Introduces TALK — Talk Time as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain TALK — Talk Time, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: hold_time
+  name: HOLD — Hold Time
+  description: Introduces HOLD — Hold Time as an operational or customer-experience measure used to interpret
+    contact-center performance.
+  learning_objective: The learner should be able to explain HOLD — Hold Time, relate it to relevant operational
+    events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: after_call_work
+  name: ACW — After Call Work
+  description: Introduces ACW — After Call Work as an operational or customer-experience measure used
+    to interpret contact-center performance.
+  learning_objective: The learner should be able to explain ACW — After Call Work, relate it to relevant
+    operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: average_handle_time
+  name: AHT — Average Handle Time
+  description: Introduces AHT — Average Handle Time as an operational or customer-experience measure used
+    to interpret contact-center performance.
+  learning_objective: The learner should be able to explain AHT — Average Handle Time, relate it to relevant
+    operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: callback_repeat_contact
+  name: Callback / Repeat Contact
+  description: Introduces Callback / Repeat Contact as an operational or customer-experience measure used
+    to interpret contact-center performance.
+  learning_objective: The learner should be able to explain Callback / Repeat Contact, relate it to relevant
+    operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: fcr
+  name: FCR — First Contact Resolution
+  description: Introduces FCR — First Contact Resolution as an operational or customer-experience measure
+    used to interpret contact-center performance.
+  learning_objective: The learner should be able to explain FCR — First Contact Resolution, relate it
+    to relevant operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: csat
+  name: CSAT — Customer Satisfaction
+  description: Introduces CSAT — Customer Satisfaction as an operational or customer-experience measure
+    used to interpret contact-center performance.
+  learning_objective: The learner should be able to explain CSAT — Customer Satisfaction, relate it to
+    relevant operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: customer_effort_score
+  name: Customer Effort Score (CES)
+  description: Introduces Customer Effort Score (CES) as an operational or customer-experience measure
+    used to interpret contact-center performance.
+  learning_objective: The learner should be able to explain Customer Effort Score (CES), relate it to
+    relevant operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: nps
+  name: NPS — Net Promoter Score
+  description: Introduces NPS — Net Promoter Score as an operational or customer-experience measure used
+    to interpret contact-center performance.
+  learning_objective: The learner should be able to explain NPS — Net Promoter Score, relate it to relevant
+    operational events or metrics, and interpret what it may indicate in a plausible scenario.
+- id: platform_overview
+  name: Platform Overview
+  description: Introduces Platform Overview as a public Genesys Cloud capability or platform concept relevant
+    to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Platform Overview, relate it
+    to relevant Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: genesys_cloud_interface_basics
+  name: Genesys Cloud Interface Basics
+  description: Introduces Genesys Cloud Interface Basics as a public Genesys Cloud capability or platform
+    concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Genesys Cloud Interface Basics,
+    relate it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical
+    use case.
+- id: queue_flow_interaction
+  name: Queue and Flow Interaction
+  description: Introduces Queue and Flow Interaction as a public Genesys Cloud capability or platform
+    concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Queue and Flow Interaction,
+    relate it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical
+    use case.
+- id: genesys_interaction_lifecycle
+  name: Interaction Lifecycle in Genesys Cloud
+  description: Introduces Interaction Lifecycle in Genesys Cloud as a public Genesys Cloud capability
+    or platform concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Interaction Lifecycle in Genesys
+    Cloud, relate it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical
+    use case.
+- id: genesys_product_overview
+  name: Genesys Cloud Product Overview
+  description: Introduces Genesys Cloud Product Overview as a public Genesys Cloud capability or platform
+    concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Genesys Cloud Product Overview,
+    relate it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical
+    use case.
+- id: platform_capabilities
+  name: Platform Capabilities
+  description: Introduces Platform Capabilities as a public Genesys Cloud capability or platform concept
+    relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Platform Capabilities, relate
+    it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: divisions
+  name: Divisions — Organization and Access Control
+  description: Introduces Divisions — Organization and Access Control as a public Genesys Cloud capability
+    or platform concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Divisions — Organization and
+    Access Control, relate it to relevant Genesys Cloud workflows, and identify a plausible operational
+    or analytical use case.
+- id: integration_mechanisms
+  name: Integration Mechanisms
+  description: Introduces Integration Mechanisms as a public Genesys Cloud capability or platform concept
+    relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Integration Mechanisms, relate
+    it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: genesys_rest_apis
+  name: Genesys Cloud REST APIs
+  description: Introduces Genesys Cloud REST APIs as a public Genesys Cloud capability or platform concept
+    relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Genesys Cloud REST APIs, relate
+    it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: data_actions
+  name: Data Actions
+  description: Introduces Data Actions as a public Genesys Cloud capability or platform concept relevant
+    to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Data Actions, relate it to
+    relevant Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: triggers
+  name: Triggers
+  description: Introduces Triggers as a public Genesys Cloud capability or platform concept relevant to
+    operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Triggers, relate it to relevant
+    Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: webhooks_and_notifications
+  name: Webhooks and Notifications
+  description: Introduces Webhooks and Notifications as a public Genesys Cloud capability or platform
+    concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Webhooks and Notifications,
+    relate it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical
+    use case.
+- id: campaigns
+  name: Campaigns
+  description: Introduces Campaigns as a public Genesys Cloud capability or platform concept relevant
+    to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Campaigns, relate it to relevant
+    Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: wem
+  name: WEM — Workforce Engagement Management
+  description: Introduces WEM — Workforce Engagement Management as a public Genesys Cloud capability or
+    platform concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of WEM — Workforce Engagement
+    Management, relate it to relevant Genesys Cloud workflows, and identify a plausible operational or
+    analytical use case.
+- id: evaluations
+  name: Evaluations
+  description: Introduces Evaluations as a public Genesys Cloud capability or platform concept relevant
+    to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Evaluations, relate it to relevant
+    Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: wfm
+  name: WFM — Workforce Management Product Overview
+  description: Introduces WFM — Workforce Management Product Overview as a public Genesys Cloud capability
+    or platform concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of WFM — Workforce Management
+    Product Overview, relate it to relevant Genesys Cloud workflows, and identify a plausible operational
+    or analytical use case.
+- id: virtual_agent
+  name: Virtual Agent — Fundamentals
+  description: Introduces Virtual Agent — Fundamentals as a public Genesys Cloud capability or platform
+    concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Virtual Agent — Fundamentals,
+    relate it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical
+    use case.
+- id: speech_and_analytics
+  name: Speech and Text Analytics (STA)
+  description: Introduces Speech and Text Analytics (STA) as a public Genesys Cloud capability or platform
+    concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Speech and Text Analytics (STA),
+    relate it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical
+    use case.
+- id: sentiment
+  name: Sentiment
+  description: Introduces Sentiment as a public Genesys Cloud capability or platform concept relevant
+    to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Sentiment, relate it to relevant
+    Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: topics
+  name: Topics / Topic Spotting
+  description: Introduces Topics / Topic Spotting as a public Genesys Cloud capability or platform concept
+    relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Topics / Topic Spotting, relate
+    it to relevant Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: ai_scoring
+  name: AI Scoring
+  description: Introduces AI Scoring as a public Genesys Cloud capability or platform concept relevant
+    to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of AI Scoring, relate it to relevant
+    Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: containment
+  name: Containment
+  description: Introduces Containment as a public Genesys Cloud capability or platform concept relevant
+    to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Containment, relate it to relevant
+    Genesys Cloud workflows, and identify a plausible operational or analytical use case.
+- id: analytics_workspace_and_performance_dashboards
+  name: Analytics Workspace and Performance Dashboards
+  description: Introduces Analytics Workspace and Performance Dashboards as a public Genesys Cloud capability
+    or platform concept relevant to operations and analytics.
+  learning_objective: The learner should be able to explain the purpose of Analytics Workspace and Performance
+    Dashboards, relate it to relevant Genesys Cloud workflows, and identify a plausible operational or
+    analytical use case.
+- id: conversations_details_query
+  name: Conversations Details Query
+  description: Introduces Conversations Details Query as a public Genesys Cloud data-access concept that
+    may support analytical or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Conversations Details Query,
+    identify the kind of data or access pattern it represents, and relate it to a plausible analytical
+    question.
+- id: conversations_attributes_search
+  name: Conversation Participant Attributes Search
+  description: Introduces Conversation Participant Attributes Search as a public Genesys Cloud data-access
+    concept that may support analytical or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Conversation Participant Attributes
+    Search, identify the kind of data or access pattern it represents, and relate it to a plausible analytical
+    question.
+- id: routing_skills
+  name: Routing Skills
+  description: Introduces Routing Skills as a public Genesys Cloud data-access concept that may support
+    analytical or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Routing Skills, identify the
+    kind of data or access pattern it represents, and relate it to a plausible analytical question.
+- id: queues_data
+  name: Queues Data
+  description: Introduces Queues Data as a public Genesys Cloud data-access concept that may support analytical
+    or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Queues Data, identify the kind
+    of data or access pattern it represents, and relate it to a plausible analytical question.
+- id: flows_data
+  name: Flows Data
+  description: Introduces Flows Data as a public Genesys Cloud data-access concept that may support analytical
+    or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Flows Data, identify the kind
+    of data or access pattern it represents, and relate it to a plausible analytical question.
+- id: users_data
+  name: Users Data
+  description: Introduces Users Data as a public Genesys Cloud data-access concept that may support analytical
+    or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Users Data, identify the kind
+    of data or access pattern it represents, and relate it to a plausible analytical question.
+- id: wrap_ups
+  name: Wrap-ups
+  description: Introduces Wrap-ups as a public Genesys Cloud data-access concept that may support analytical
+    or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Wrap-ups, identify the kind
+    of data or access pattern it represents, and relate it to a plausible analytical question.
+- id: outcomes
+  name: Outcomes
+  description: Introduces Outcomes as a public Genesys Cloud data-access concept that may support analytical
+    or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Outcomes, identify the kind
+    of data or access pattern it represents, and relate it to a plausible analytical question.
+- id: data_tables
+  name: Data Tables
+  description: Introduces Data Tables as a public Genesys Cloud data-access concept that may support analytical
+    or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Data Tables, identify the kind
+    of data or access pattern it represents, and relate it to a plausible analytical question.
+- id: transcript_search
+  name: Transcript Search
+  description: Introduces Transcript Search as a public Genesys Cloud data-access concept that may support
+    analytical or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Transcript Search, identify
+    the kind of data or access pattern it represents, and relate it to a plausible analytical question.
+- id: users_details_query
+  name: Users Details Query
+  description: Introduces Users Details Query as a public Genesys Cloud data-access concept that may support
+    analytical or integration use cases.
+  learning_objective: The learner should be able to explain the purpose of Users Details Query, identify
+    the kind of data or access pattern it represents, and relate it to a plausible analytical question.
+- id: core_python_structures
+  name: Core Python Structures
+  description: Introduces Core Python Structures as a practical programming concept for reading, preparing,
+    or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Core Python Structures, recognize
+    its role in a simple data workflow, and use it in a small supervised analytical task.
+- id: reading_simple_python_code
+  name: Reading Simple Python Code
+  description: Introduces Reading Simple Python Code as a practical programming concept for reading, preparing,
+    or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Reading Simple Python Code, recognize
+    its role in a simple data workflow, and use it in a small supervised analytical task.
+- id: reading_python_lists
+  name: Reading Python Lists
+  description: Introduces Reading Python Lists as a practical programming concept for reading, preparing,
+    or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Reading Python Lists, recognize its
+    role in a simple data workflow, and use it in a small supervised analytical task.
+- id: reading_python_dictionaries
+  name: Reading Python Dictionaries
+  description: Introduces Reading Python Dictionaries as a practical programming concept for reading,
+    preparing, or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Reading Python Dictionaries, recognize
+    its role in a simple data workflow, and use it in a small supervised analytical task.
+- id: reading_python_sets
+  name: Reading Python Sets
+  description: Introduces Reading Python Sets as a practical programming concept for reading, preparing,
+    or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Reading Python Sets, recognize its
+    role in a simple data workflow, and use it in a small supervised analytical task.
+- id: reading_numpy_arrays
+  name: Reading NumPy Arrays
+  description: Introduces Reading NumPy Arrays as a practical programming concept for reading, preparing,
+    or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Reading NumPy Arrays, recognize its
+    role in a simple data workflow, and use it in a small supervised analytical task.
+- id: data_structures_for_analysis
+  name: Data Structures for Analysis
+  description: Introduces Data Structures for Analysis as a practical programming concept for reading,
+    preparing, or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Data Structures for Analysis, recognize
+    its role in a simple data workflow, and use it in a small supervised analytical task.
+- id: basic_data_manipulation
+  name: Basic Data Manipulation
+  description: Introduces Basic Data Manipulation as a practical programming concept for reading, preparing,
+    or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Basic Data Manipulation, recognize
+    its role in a simple data workflow, and use it in a small supervised analytical task.
+- id: pandas_fundamentals
+  name: Pandas Fundamentals
+  description: Introduces Pandas Fundamentals as a practical programming concept for reading, preparing,
+    or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Pandas Fundamentals, recognize its
+    role in a simple data workflow, and use it in a small supervised analytical task.
+- id: sql_fundamentals
+  name: SQL Fundamentals
+  description: Introduces SQL Fundamentals as a practical programming concept for reading, preparing,
+    or transforming analytical data.
+  learning_objective: The learner should be able to explain or read SQL Fundamentals, recognize its role
+    in a simple data workflow, and use it in a small supervised analytical task.
+- id: reading_existing_team_scripts
+  name: Reading Existing Team Scripts
+  description: Introduces Reading Existing Team Scripts as a practical programming concept for reading,
+    preparing, or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Reading Existing Team Scripts, recognize
+    its role in a simple data workflow, and use it in a small supervised analytical task.
+- id: small_data_changes_under_review
+  name: Small Data Changes Under Review
+  description: Introduces Small Data Changes Under Review as a practical programming concept for reading,
+    preparing, or transforming analytical data.
+  learning_objective: The learner should be able to explain or read Small Data Changes Under Review, recognize
+    its role in a simple data workflow, and use it in a small supervised analytical task.
+- id: mean
+  name: Mean
+  description: Introduces Mean as a statistical concept used to summarize, compare, or interpret data.
+  learning_objective: The learner should be able to explain Mean, recognize when it is relevant, and interpret
+    it correctly in a simple analytical scenario.
+- id: median
+  name: Median
+  description: Introduces Median as a statistical concept used to summarize, compare, or interpret data.
+  learning_objective: The learner should be able to explain Median, recognize when it is relevant, and
+    interpret it correctly in a simple analytical scenario.
+- id: percentiles
+  name: Percentiles
+  description: Introduces Percentiles as a statistical concept used to summarize, compare, or interpret
+    data.
+  learning_objective: The learner should be able to explain Percentiles, recognize when it is relevant,
+    and interpret it correctly in a simple analytical scenario.
+- id: variance
+  name: Variance
+  description: Introduces Variance as a statistical concept used to summarize, compare, or interpret data.
+  learning_objective: The learner should be able to explain Variance, recognize when it is relevant, and
+    interpret it correctly in a simple analytical scenario.
+- id: correlation
+  name: Correlation
+  description: Introduces Correlation as a statistical concept used to summarize, compare, or interpret
+    data.
+  learning_objective: The learner should be able to explain Correlation, recognize when it is relevant,
+    and interpret it correctly in a simple analytical scenario.
+- id: basic_distribution_interpretation
+  name: Basic Distribution Interpretation
+  description: Introduces Basic Distribution Interpretation as a statistical concept used to summarize,
+    compare, or interpret data.
+  learning_objective: The learner should be able to explain Basic Distribution Interpretation, recognize
+    when it is relevant, and interpret it correctly in a simple analytical scenario.
+- id: p_value
+  name: p-value
+  description: Introduces p-value as a statistical concept used to summarize, compare, or interpret data.
+  learning_objective: The learner should be able to explain p-value, recognize when it is relevant, and
+    interpret it correctly in a simple analytical scenario.
+- id: chart_interpretation
+  name: Chart Interpretation
+  description: Introduces Chart Interpretation as a data-visualization concept used to interpret or communicate
+    analytical information.
+  learning_objective: The learner should be able to explain Chart Interpretation, recognize when it is
+    useful, and apply or interpret it in a simple analytical communication scenario.
+- id: bar_charts
+  name: Bar Charts
+  description: Introduces Bar Charts as a data-visualization concept used to interpret or communicate
+    analytical information.
+  learning_objective: The learner should be able to explain Bar Charts, recognize when it is useful, and
+    apply or interpret it in a simple analytical communication scenario.
+- id: column_charts
+  name: Column Charts
+  description: Introduces Column Charts as a data-visualization concept used to interpret or communicate
+    analytical information.
+  learning_objective: The learner should be able to explain Column Charts, recognize when it is useful,
+    and apply or interpret it in a simple analytical communication scenario.
+- id: time_series
+  name: Time Series
+  description: Introduces Time Series as a data-visualization concept used to interpret or communicate
+    analytical information.
+  learning_objective: The learner should be able to explain Time Series, recognize when it is useful,
+    and apply or interpret it in a simple analytical communication scenario.
+- id: scatter_plots
+  name: Scatter Plots
+  description: Introduces Scatter Plots as a data-visualization concept used to interpret or communicate
+    analytical information.
+  learning_objective: The learner should be able to explain Scatter Plots, recognize when it is useful,
+    and apply or interpret it in a simple analytical communication scenario.
+- id: basic_visualization_selection
+  name: Basic Visualization Selection
+  description: Introduces Basic Visualization Selection as a data-visualization concept used to interpret
+    or communicate analytical information.
+  learning_objective: The learner should be able to explain Basic Visualization Selection, recognize when
+    it is useful, and apply or interpret it in a simple analytical communication scenario.
+- id: introductory_gestalt_principles
+  name: Introductory Gestalt Principles
+  description: Introduces Introductory Gestalt Principles as a data-visualization concept used to interpret
+    or communicate analytical information.
+  learning_objective: The learner should be able to explain Introductory Gestalt Principles, recognize
+    when it is useful, and apply or interpret it in a simple analytical communication scenario.
+- id: visual_communication
+  name: Visual Communication
+  description: Introduces Visual Communication as a data-visualization concept used to interpret or communicate
+    analytical information.
+  learning_objective: The learner should be able to explain Visual Communication, recognize when it is
+    useful, and apply or interpret it in a simple analytical communication scenario.
+- id: simple_analytical_narrative
+  name: Simple Analytical Narrative
+  description: Introduces Simple Analytical Narrative as a data-visualization concept used to interpret
+    or communicate analytical information.
+  learning_objective: The learner should be able to explain Simple Analytical Narrative, recognize when
+    it is useful, and apply or interpret it in a simple analytical communication scenario.
+relationships:
+- from: contact_center_fundamentals
+  to: contact_center_definition
+  type: contains
+- from: contact_center_fundamentals
+  to: customer_interaction
+  type: contains
+- from: contact_center_fundamentals
+  to: agents
+  type: contains
+- from: contact_center_fundamentals
+  to: queues
+  type: contains
+- from: contact_center_fundamentals
+  to: flows
+  type: contains
+- from: contact_center_fundamentals
+  to: operational_objectives
+  type: contains
+- from: contact_center_fundamentals
+  to: basic_customer_service_journey
+  type: contains
+- from: contact_center_fundamentals
+  to: acd
+  type: contains
+- from: contact_center_fundamentals
+  to: agent_skills
+  type: contains
+- from: contact_center_metrics
+  to: offered
+  type: contains
+- from: contact_center_metrics
+  to: answered
+  type: contains
+- from: contact_center_metrics
+  to: abandonment
+  type: contains
+- from: contact_center_metrics
+  to: flow_out
+  type: contains
+- from: contact_center_metrics
+  to: flow_rate
+  type: contains
+- from: contact_center_metrics
+  to: flow_disconnect_volume
+  type: contains
+- from: contact_center_metrics
+  to: flow_disconnect_percentage
+  type: contains
+- from: contact_center_metrics
+  to: call_retention_in_flow
+  type: contains
+- from: contact_center_metrics
+  to: overflow
+  type: contains
+- from: contact_center_metrics
+  to: answer_percent
+  type: contains
+- from: contact_center_metrics
+  to: abandon_percent
+  type: contains
+- from: contact_center_metrics
+  to: asa
+  type: contains
+- from: contact_center_metrics
+  to: average_wait
+  type: contains
+- from: contact_center_metrics
+  to: service_level
+  type: contains
+- from: contact_center_metrics
+  to: talk_time
+  type: contains
+- from: contact_center_metrics
+  to: hold_time
+  type: contains
+- from: contact_center_metrics
+  to: after_call_work
+  type: contains
+- from: contact_center_metrics
+  to: average_handle_time
+  type: contains
+- from: contact_center_metrics
+  to: callback_repeat_contact
+  type: contains
+- from: contact_center_metrics
+  to: fcr
+  type: contains
+- from: contact_center_metrics
+  to: csat
+  type: contains
+- from: contact_center_metrics
+  to: customer_effort_score
+  type: contains
+- from: contact_center_metrics
+  to: nps
+  type: contains
+- from: genesys_cloud
+  to: platform_overview
+  type: contains
+- from: genesys_cloud
+  to: genesys_cloud_interface_basics
+  type: contains
+- from: genesys_cloud
+  to: queue_flow_interaction
+  type: contains
+- from: genesys_cloud
+  to: genesys_interaction_lifecycle
+  type: contains
+- from: genesys_cloud
+  to: genesys_product_overview
+  type: contains
+- from: genesys_cloud
+  to: platform_capabilities
+  type: contains
+- from: genesys_cloud
+  to: divisions
+  type: contains
+- from: genesys_cloud
+  to: integration_mechanisms
+  type: contains
+- from: genesys_cloud
+  to: genesys_rest_apis
+  type: contains
+- from: genesys_cloud
+  to: data_actions
+  type: contains
+- from: genesys_cloud
+  to: triggers
+  type: contains
+- from: genesys_cloud
+  to: webhooks_and_notifications
+  type: contains
+- from: genesys_cloud
+  to: campaigns
+  type: contains
+- from: genesys_cloud
+  to: wem
+  type: contains
+- from: genesys_cloud
+  to: evaluations
+  type: contains
+- from: genesys_cloud
+  to: wfm
+  type: contains
+- from: genesys_cloud
+  to: virtual_agent
+  type: contains
+- from: genesys_cloud
+  to: speech_and_analytics
+  type: contains
+- from: genesys_cloud
+  to: sentiment
+  type: contains
+- from: genesys_cloud
+  to: topics
+  type: contains
+- from: genesys_cloud
+  to: ai_scoring
+  type: contains
+- from: genesys_cloud
+  to: containment
+  type: contains
+- from: genesys_cloud
+  to: analytics_workspace_and_performance_dashboards
+  type: contains
+- from: genesys_data_access
+  to: conversations_details_query
+  type: contains
+- from: genesys_data_access
+  to: conversations_attributes_search
+  type: contains
+- from: genesys_data_access
+  to: routing_skills
+  type: contains
+- from: genesys_data_access
+  to: queues_data
+  type: contains
+- from: genesys_data_access
+  to: flows_data
+  type: contains
+- from: genesys_data_access
+  to: users_data
+  type: contains
+- from: genesys_data_access
+  to: wrap_ups
+  type: contains
+- from: genesys_data_access
+  to: outcomes
+  type: contains
+- from: genesys_data_access
+  to: data_tables
+  type: contains
+- from: genesys_data_access
+  to: transcript_search
+  type: contains
+- from: genesys_data_access
+  to: users_details_query
+  type: contains
+- from: programming
+  to: core_python_structures
+  type: contains
+- from: programming
+  to: reading_simple_python_code
+  type: contains
+- from: programming
+  to: reading_python_lists
+  type: contains
+- from: programming
+  to: reading_python_dictionaries
+  type: contains
+- from: programming
+  to: reading_python_sets
+  type: contains
+- from: programming
+  to: reading_numpy_arrays
+  type: contains
+- from: programming
+  to: data_structures_for_analysis
+  type: contains
+- from: programming
+  to: basic_data_manipulation
+  type: contains
+- from: programming
+  to: pandas_fundamentals
+  type: contains
+- from: programming
+  to: sql_fundamentals
+  type: contains
+- from: programming
+  to: reading_existing_team_scripts
+  type: contains
+- from: programming
+  to: small_data_changes_under_review
+  type: contains
+- from: statistics
+  to: mean
+  type: contains
+- from: statistics
+  to: median
+  type: contains
+- from: statistics
+  to: percentiles
+  type: contains
+- from: statistics
+  to: variance
+  type: contains
+- from: statistics
+  to: correlation
+  type: contains
+- from: statistics
+  to: basic_distribution_interpretation
+  type: contains
+- from: statistics
+  to: p_value
+  type: contains
+- from: data_visualization
+  to: chart_interpretation
+  type: contains
+- from: data_visualization
+  to: bar_charts
+  type: contains
+- from: data_visualization
+  to: column_charts
+  type: contains
+- from: data_visualization
+  to: time_series
+  type: contains
+- from: data_visualization
+  to: scatter_plots
+  type: contains
+- from: data_visualization
+  to: basic_visualization_selection
+  type: contains
+- from: data_visualization
+  to: introductory_gestalt_principles
+  type: contains
+- from: data_visualization
+  to: visual_communication
+  type: contains
+- from: data_visualization
+  to: simple_analytical_narrative
+  type: contains
+- from: contact_center_fundamentals
+  to: contact_center_metrics
+  type: prerequisite_for
+- from: contact_center_fundamentals
+  to: genesys_cloud
+  type: prerequisite_for
+- from: contact_center_metrics
+  to: genesys_data_access
+  type: prerequisite_for
+- from: genesys_cloud
+  to: genesys_data_access
+  type: prerequisite_for
+- from: contact_center_definition
+  to: customer_interaction
+  type: prerequisite_for
+- from: contact_center_definition
+  to: agents
+  type: prerequisite_for
+- from: contact_center_definition
+  to: queues
+  type: prerequisite_for
+- from: contact_center_definition
+  to: flows
+  type: prerequisite_for
+- from: contact_center_definition
+  to: operational_objectives
+  type: prerequisite_for
+- from: customer_interaction
+  to: basic_customer_service_journey
+  type: prerequisite_for
+- from: queues
+  to: basic_customer_service_journey
+  type: prerequisite_for
+- from: flows
+  to: basic_customer_service_journey
+  type: prerequisite_for
+- from: agents
+  to: acd
+  type: prerequisite_for
+- from: queues
+  to: acd
+  type: prerequisite_for
+- from: agents
+  to: agent_skills
+  type: prerequisite_for
+- from: acd
+  to: agent_skills
+  type: prerequisite_for
+- from: offered
+  to: answered
+  type: prerequisite_for
+- from: offered
+  to: abandonment
+  type: prerequisite_for
+- from: offered
+  to: flow_out
+  type: prerequisite_for
+- from: offered
+  to: flow_rate
+  type: prerequisite_for
+- from: flow_out
+  to: flow_rate
+  type: prerequisite_for
+- from: flow_disconnect_volume
+  to: flow_disconnect_percentage
+  type: prerequisite_for
+- from: flow_disconnect_volume
+  to: call_retention_in_flow
+  type: prerequisite_for
+- from: flow_disconnect_percentage
+  to: call_retention_in_flow
+  type: prerequisite_for
+- from: offered
+  to: overflow
+  type: prerequisite_for
+- from: offered
+  to: answer_percent
+  type: prerequisite_for
+- from: answered
+  to: answer_percent
+  type: prerequisite_for
+- from: offered
+  to: abandon_percent
+  type: prerequisite_for
+- from: abandonment
+  to: abandon_percent
+  type: prerequisite_for
+- from: answered
+  to: asa
+  type: prerequisite_for
+- from: answered
+  to: average_wait
+  type: prerequisite_for
+- from: abandonment
+  to: average_wait
+  type: prerequisite_for
+- from: flow_out
+  to: average_wait
+  type: prerequisite_for
+- from: answered
+  to: service_level
+  type: prerequisite_for
+- from: offered
+  to: service_level
+  type: prerequisite_for
+- from: answered
+  to: talk_time
+  type: prerequisite_for
+- from: answered
+  to: hold_time
+  type: prerequisite_for
+- from: answered
+  to: after_call_work
+  type: prerequisite_for
+- from: talk_time
+  to: average_handle_time
+  type: prerequisite_for
+- from: hold_time
+  to: average_handle_time
+  type: prerequisite_for
+- from: after_call_work
+  to: average_handle_time
+  type: prerequisite_for
+- from: answered
+  to: callback_repeat_contact
+  type: prerequisite_for
+- from: answered
+  to: fcr
+  type: prerequisite_for
+- from: callback_repeat_contact
+  to: fcr
+  type: prerequisite_for
+- from: answered
+  to: csat
+  type: prerequisite_for
+- from: answered
+  to: nps
+  type: prerequisite_for
+- from: platform_overview
+  to: genesys_cloud_interface_basics
+  type: prerequisite_for
+- from: platform_overview
+  to: queue_flow_interaction
+  type: prerequisite_for
+- from: queue_flow_interaction
+  to: genesys_interaction_lifecycle
+  type: prerequisite_for
+- from: platform_overview
+  to: genesys_product_overview
+  type: prerequisite_for
+- from: platform_overview
+  to: platform_capabilities
+  type: prerequisite_for
+- from: platform_overview
+  to: divisions
+  type: prerequisite_for
+- from: platform_overview
+  to: integration_mechanisms
+  type: prerequisite_for
+- from: integration_mechanisms
+  to: genesys_rest_apis
+  type: prerequisite_for
+- from: genesys_rest_apis
+  to: data_actions
+  type: prerequisite_for
+- from: integration_mechanisms
+  to: triggers
+  type: prerequisite_for
+- from: integration_mechanisms
+  to: webhooks_and_notifications
+  type: prerequisite_for
+- from: genesys_product_overview
+  to: campaigns
+  type: prerequisite_for
+- from: genesys_product_overview
+  to: wem
+  type: prerequisite_for
+- from: wem
+  to: evaluations
+  type: prerequisite_for
+- from: wem
+  to: wfm
+  type: prerequisite_for
+- from: genesys_product_overview
+  to: virtual_agent
+  type: prerequisite_for
+- from: platform_capabilities
+  to: speech_and_analytics
+  type: prerequisite_for
+- from: speech_and_analytics
+  to: sentiment
+  type: prerequisite_for
+- from: speech_and_analytics
+  to: topics
+  type: prerequisite_for
+- from: evaluations
+  to: ai_scoring
+  type: prerequisite_for
+- from: speech_and_analytics
+  to: ai_scoring
+  type: prerequisite_for
+- from: virtual_agent
+  to: containment
+  type: prerequisite_for
+- from: genesys_cloud_interface_basics
+  to: analytics_workspace_and_performance_dashboards
+  type: prerequisite_for
+- from: platform_capabilities
+  to: analytics_workspace_and_performance_dashboards
+  type: prerequisite_for
+- from: queues_data
+  to: conversations_details_query
+  type: prerequisite_for
+- from: users_data
+  to: conversations_details_query
+  type: prerequisite_for
+- from: flows_data
+  to: conversations_details_query
+  type: prerequisite_for
+- from: wrap_ups
+  to: conversations_details_query
+  type: prerequisite_for
+- from: conversations_details_query
+  to: conversations_attributes_search
+  type: prerequisite_for
+- from: flows_data
+  to: outcomes
+  type: prerequisite_for
+- from: conversations_details_query
+  to: transcript_search
+  type: prerequisite_for
+- from: users_data
+  to: users_details_query
+  type: prerequisite_for
+- from: core_python_structures
+  to: reading_simple_python_code
+  type: prerequisite_for
+- from: core_python_structures
+  to: reading_python_lists
+  type: prerequisite_for
+- from: core_python_structures
+  to: reading_python_dictionaries
+  type: prerequisite_for
+- from: core_python_structures
+  to: reading_python_sets
+  type: prerequisite_for
+- from: reading_python_lists
+  to: reading_numpy_arrays
+  type: prerequisite_for
+- from: reading_python_lists
+  to: data_structures_for_analysis
+  type: prerequisite_for
+- from: reading_python_dictionaries
+  to: data_structures_for_analysis
+  type: prerequisite_for
+- from: reading_python_sets
+  to: data_structures_for_analysis
+  type: prerequisite_for
+- from: reading_numpy_arrays
+  to: data_structures_for_analysis
+  type: prerequisite_for
+- from: data_structures_for_analysis
+  to: basic_data_manipulation
+  type: prerequisite_for
+- from: basic_data_manipulation
+  to: pandas_fundamentals
+  type: prerequisite_for
+- from: reading_simple_python_code
+  to: reading_existing_team_scripts
+  type: prerequisite_for
+- from: pandas_fundamentals
+  to: small_data_changes_under_review
+  type: prerequisite_for
+- from: reading_existing_team_scripts
+  to: small_data_changes_under_review
+  type: prerequisite_for
+- from: mean
+  to: variance
+  type: prerequisite_for
+- from: variance
+  to: correlation
+  type: prerequisite_for
+- from: mean
+  to: basic_distribution_interpretation
+  type: prerequisite_for
+- from: median
+  to: basic_distribution_interpretation
+  type: prerequisite_for
+- from: percentiles
+  to: basic_distribution_interpretation
+  type: prerequisite_for
+- from: variance
+  to: basic_distribution_interpretation
+  type: prerequisite_for
+- from: basic_distribution_interpretation
+  to: p_value
+  type: prerequisite_for
+- from: chart_interpretation
+  to: bar_charts
+  type: prerequisite_for
+- from: chart_interpretation
+  to: column_charts
+  type: prerequisite_for
+- from: chart_interpretation
+  to: time_series
+  type: prerequisite_for
+- from: chart_interpretation
+  to: scatter_plots
+  type: prerequisite_for
+- from: bar_charts
+  to: basic_visualization_selection
+  type: prerequisite_for
+- from: column_charts
+  to: basic_visualization_selection
+  type: prerequisite_for
+- from: time_series
+  to: basic_visualization_selection
+  type: prerequisite_for
+- from: scatter_plots
+  to: basic_visualization_selection
+  type: prerequisite_for
+- from: basic_visualization_selection
+  to: visual_communication
+  type: prerequisite_for
+- from: introductory_gestalt_principles
+  to: visual_communication
+  type: prerequisite_for
+- from: visual_communication
+  to: simple_analytical_narrative
+  type: prerequisite_for
